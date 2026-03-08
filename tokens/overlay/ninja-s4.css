@@ -1,0 +1,40 @@
+/* aw-devkit | Ninja Overlay S4 — 100% Identity
+ * Full Alawein: complete ninja palette, shuriken geometry, max shadows,
+ * heavy weave, all evidence visible. Theme is fully subsumed.
+ */
+
+@layer alawein-overlay {
+  [data-overlay="s4"] {
+    /* ── Full Identity Palette ────────────────────────────────────── */
+    --aw-color-bg:            var(--aw-ninja-void);
+    --aw-color-bg-elevated:   var(--aw-ninja-charcoal);
+    --aw-color-bg-surface:    var(--aw-ninja-smoke);
+    --aw-color-text:          var(--aw-ninja-moonlight);
+    --aw-color-heading:       var(--aw-ninja-ghost);
+    --aw-color-accent:        var(--aw-ninja-blood);
+    --aw-color-accent-hover:  var(--aw-ninja-ember);
+    --aw-color-border:        var(--aw-ninja-smoke);
+    --aw-color-border-strong: var(--aw-ninja-blood);
+    --aw-color-overlay:       var(--aw-ninja-veil);
+
+    /* ── Motion ──────────────────────────────────────────────────── */
+    --aw-transition-fast:     var(--aw-duration-fast) var(--aw-ease-ninja);
+    --aw-transition-normal:   var(--aw-duration-normal) var(--aw-ease-ninja);
+
+    /* ── Shuriken Geometry ───────────────────────────────────────── */
+    --aw-clip-theme:          var(--aw-clip-shuriken-md);
+
+    /* ── Maximum Shadows ─────────────────────────────────────────── */
+    --aw-shadow-theme:        var(--aw-shadow-ninja-lg);
+    --aw-shadow-theme-lg:     var(--aw-shadow-ninja-xl);
+
+    /* ── Heavy Weave ─────────────────────────────────────────────── */
+    --aw-texture-theme:       var(--aw-texture-weave);
+    --aw-texture-theme-opacity: var(--aw-texture-opacity-heavy);
+
+    /* ── Full Evidence ───────────────────────────────────────────── */
+    --aw-evidence-color:      var(--aw-ninja-ghost);
+    --aw-evidence-font:       var(--aw-font-mono);
+    --aw-evidence-size:       var(--aw-text-xs);
+  }
+}

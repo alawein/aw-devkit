@@ -1,0 +1,90 @@
+/* aw-devkit | Button Component */
+
+@layer alawein-components {
+  .aw-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--aw-space-2);
+    padding: var(--aw-padding-sm) var(--aw-padding-md);
+    font-family: var(--aw-font-body);
+    font-size: var(--aw-text-sm);
+    font-weight: var(--aw-weight-semibold);
+    letter-spacing: var(--aw-tracking-wide);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--aw-color-text);
+    background: var(--aw-color-bg-surface);
+    border: var(--aw-border-thin) solid var(--aw-color-border-strong);
+    clip-path: var(--aw-clip-theme, var(--aw-clip-cut-tr-sm));
+    box-shadow: var(--aw-shadow-theme, var(--aw-shadow-brutal-sm));
+    cursor: pointer;
+    transition: all var(--aw-transition-fast);
+    line-height: 1;
+  }
+
+  .aw-btn:hover {
+    color: var(--aw-color-heading);
+    background: var(--aw-color-bg-elevated);
+    box-shadow: var(--aw-shadow-theme-lg, var(--aw-shadow-brutal-md));
+    transform: translate(-1px, -1px);
+  }
+
+  .aw-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: none;
+  }
+
+  .aw-btn:focus-visible {
+    outline: 2px solid var(--aw-color-focus);
+    outline-offset: 2px;
+  }
+
+  .aw-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* ── Variants ──────────────────────────────────────────────────── */
+  .aw-btn--primary {
+    color: var(--aw-ninja-ghost);
+    background: var(--aw-color-accent);
+    border-color: var(--aw-color-accent);
+  }
+
+  .aw-btn--primary:hover {
+    background: var(--aw-color-accent-hover);
+    border-color: var(--aw-color-accent-hover);
+    color: var(--aw-ninja-ghost);
+  }
+
+  .aw-btn--ghost {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  .aw-btn--ghost:hover {
+    background: var(--aw-color-bg-surface);
+    box-shadow: none;
+  }
+
+  .aw-btn--danger {
+    color: var(--aw-ninja-ghost);
+    background: var(--aw-color-error);
+    border-color: var(--aw-color-error);
+  }
+
+  /* ── Sizes ─────────────────────────────────────────────────────── */
+  .aw-btn--sm {
+    padding: var(--aw-padding-xs) var(--aw-padding-sm);
+    font-size: var(--aw-text-xs);
+  }
+
+  .aw-btn--lg {
+    padding: var(--aw-padding-md) var(--aw-padding-lg);
+    font-size: var(--aw-text-base);
+  }
+}

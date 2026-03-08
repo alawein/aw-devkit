@@ -1,0 +1,63 @@
+/* aw-devkit | Stats Panel Component
+ * Industrial-readout style stats display.
+ */
+
+@layer alawein-components {
+  .aw-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--aw-gap-md);
+  }
+
+  .aw-stat {
+    position: relative;
+    padding: var(--aw-padding-md);
+    background: var(--aw-color-bg-elevated);
+    border: var(--aw-border-thin) solid var(--aw-color-border);
+    border-left: var(--aw-border-brutal) solid var(--aw-color-accent);
+    clip-path: var(--aw-clip-cut-tr-sm);
+  }
+
+  .aw-stat__label {
+    font-family: var(--aw-font-mono);
+    font-size: var(--aw-text-xs);
+    font-weight: var(--aw-weight-semibold);
+    letter-spacing: var(--aw-tracking-wider);
+    text-transform: uppercase;
+    color: var(--aw-color-text-muted);
+    margin-bottom: var(--aw-space-1);
+  }
+
+  .aw-stat__value {
+    font-family: var(--aw-font-display);
+    font-size: var(--aw-text-3xl);
+    font-weight: var(--aw-weight-bold);
+    color: var(--aw-color-heading);
+    letter-spacing: var(--aw-tracking-tight);
+    line-height: var(--aw-leading-tight);
+  }
+
+  .aw-stat__delta {
+    font-family: var(--aw-font-mono);
+    font-size: var(--aw-text-xs);
+    margin-top: var(--aw-space-1);
+  }
+
+  .aw-stat__delta--up {
+    color: var(--aw-color-success);
+  }
+
+  .aw-stat__delta--down {
+    color: var(--aw-color-error);
+  }
+
+  /* ── Texture Overlay ───────────────────────────────────────────── */
+  .aw-stat::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--aw-texture-theme);
+    opacity: var(--aw-texture-theme-opacity, 0);
+    pointer-events: none;
+  }
+}

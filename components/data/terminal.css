@@ -1,0 +1,71 @@
+/* aw-devkit | Terminal Component
+ * Code/terminal display with scanline texture overlay.
+ */
+
+@layer alawein-components {
+  .aw-terminal {
+    position: relative;
+    background: var(--aw-ninja-void);
+    border: var(--aw-border-thick) solid var(--aw-color-border-strong);
+    clip-path: var(--aw-clip-cut-tr-md);
+    overflow: hidden;
+  }
+
+  .aw-terminal__header {
+    display: flex;
+    align-items: center;
+    gap: var(--aw-space-2);
+    padding: var(--aw-padding-xs) var(--aw-padding-md);
+    background: var(--aw-ninja-charcoal);
+    border-bottom: var(--aw-border-thin) solid var(--aw-color-border);
+    font-family: var(--aw-font-mono);
+    font-size: var(--aw-text-xs);
+    color: var(--aw-color-text-muted);
+  }
+
+  .aw-terminal__dot {
+    width: 8px;
+    height: 8px;
+    background: var(--aw-color-text-muted);
+    clip-path: circle(50%);
+  }
+
+  .aw-terminal__dot--red    { background: var(--aw-color-error); }
+  .aw-terminal__dot--yellow { background: var(--aw-color-warning); }
+  .aw-terminal__dot--green  { background: var(--aw-color-success); }
+
+  .aw-terminal__body {
+    padding: var(--aw-padding-md);
+    font-family: var(--aw-font-mono);
+    font-size: var(--aw-text-sm);
+    line-height: var(--aw-leading-relaxed);
+    color: var(--aw-ninja-moonlight);
+    overflow-x: auto;
+    white-space: pre;
+    tab-size: 2;
+  }
+
+  .aw-terminal__prompt {
+    color: var(--aw-color-accent);
+    user-select: none;
+  }
+
+  .aw-terminal__output {
+    color: var(--aw-ninja-moonlight);
+  }
+
+  .aw-terminal__comment {
+    color: var(--aw-color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Scanline Overlay ──────────────────────────────────────────── */
+  .aw-terminal::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--aw-texture-scanlines);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}

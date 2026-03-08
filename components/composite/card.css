@@ -1,0 +1,62 @@
+/* aw-devkit | Card Component */
+
+@layer alawein-components {
+  .aw-card {
+    position: relative;
+    background: var(--aw-color-bg-elevated);
+    border: var(--aw-border-thin) solid var(--aw-color-border);
+    clip-path: var(--aw-clip-theme, var(--aw-clip-cut-tr-md));
+    box-shadow: var(--aw-shadow-theme, var(--aw-shadow-brutal-md));
+    transition: transform var(--aw-transition-normal),
+                box-shadow var(--aw-transition-normal);
+    overflow: hidden;
+  }
+
+  .aw-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--aw-shadow-theme-lg, var(--aw-shadow-brutal-lg));
+  }
+
+  .aw-card__header {
+    padding: var(--aw-padding-md);
+    border-bottom: var(--aw-border-thin) solid var(--aw-color-border);
+  }
+
+  .aw-card__body {
+    padding: var(--aw-padding-md);
+  }
+
+  .aw-card__footer {
+    padding: var(--aw-padding-sm) var(--aw-padding-md);
+    border-top: var(--aw-border-thin) solid var(--aw-color-border);
+    font-family: var(--aw-font-mono);
+    font-size: var(--aw-text-xs);
+    color: var(--aw-color-text-muted);
+  }
+
+  .aw-card__title {
+    font-family: var(--aw-font-heading);
+    font-size: var(--aw-size-h5);
+    font-weight: var(--aw-weight-bold);
+    color: var(--aw-color-heading);
+    letter-spacing: var(--aw-tracking-wide);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .aw-card__media {
+    width: 100%;
+    display: block;
+    border-bottom: var(--aw-border-thin) solid var(--aw-color-border);
+  }
+
+  /* ── Texture Overlay ───────────────────────────────────────────── */
+  .aw-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--aw-texture-theme);
+    opacity: var(--aw-texture-theme-opacity, 0);
+    pointer-events: none;
+  }
+}

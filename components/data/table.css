@@ -1,0 +1,59 @@
+/* aw-devkit | Table Component */
+
+@layer alawein-components {
+  .aw-table-wrap {
+    overflow-x: auto;
+    border: var(--aw-border-thin) solid var(--aw-color-border);
+    clip-path: var(--aw-clip-cut-tr-sm);
+  }
+
+  .aw-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--aw-font-body);
+    font-size: var(--aw-text-sm);
+    color: var(--aw-color-text);
+  }
+
+  .aw-table thead {
+    background: var(--aw-color-bg-surface);
+    border-bottom: var(--aw-border-thick) solid var(--aw-color-border-strong);
+  }
+
+  .aw-table th {
+    padding: var(--aw-padding-sm) var(--aw-padding-md);
+    font-weight: var(--aw-weight-bold);
+    letter-spacing: var(--aw-tracking-wide);
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--aw-color-heading);
+    font-size: var(--aw-text-xs);
+  }
+
+  .aw-table td {
+    padding: var(--aw-padding-sm) var(--aw-padding-md);
+    border-bottom: var(--aw-border-thin) solid var(--aw-color-border);
+  }
+
+  /* ── Editorial Alternating Rows ────────────────────────────────── */
+  .aw-table--striped tbody tr:nth-child(even) {
+    background: var(--aw-color-bg-surface);
+  }
+
+  .aw-table tbody tr:hover {
+    background: var(--aw-color-bg-elevated);
+  }
+
+  /* ── Compact Variant ───────────────────────────────────────────── */
+  .aw-table--compact th,
+  .aw-table--compact td {
+    padding: var(--aw-padding-xs) var(--aw-padding-sm);
+  }
+
+  /* ── Mono Data Cells ───────────────────────────────────────────── */
+  .aw-table .aw-table__mono {
+    font-family: var(--aw-font-mono);
+    font-size: var(--aw-text-xs);
+    letter-spacing: var(--aw-tracking-normal);
+  }
+}

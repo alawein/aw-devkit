@@ -1,0 +1,26 @@
+{
+  "name": "@alawein/aw-devkit",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Zero-dependency vanilla CSS+JS design devkit for the Alawein design system. 4 themes, Ninja Overlay, ~120 CSS custom properties.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alawein/aw-devkit.git"
+  },
+  "files": [
+    "tokens/",
+    "components/",
+    "tools/",
+    "bin/"
+  ],
+  "bin": {
+    "aw-new-theme": "./bin/aw-new-theme.js"
+  },
+  "exports": {
+    "./tokens": "./tokens/index.css",
+    "./components": "./components/index.css",
+    "./tools/*": "./tools/*.js"
+  },
+  "keywords": ["css", "design-system", "design-tokens", "vanilla-css", "no-build"]
+}

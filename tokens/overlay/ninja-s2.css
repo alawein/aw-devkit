@@ -1,0 +1,28 @@
+/* aw-devkit | Ninja Overlay S2 — 50% Identity
+ * Moderate: S1 + ninja shadows + fabric weave texture + evidence marks.
+ * Theme and identity share the stage equally.
+ */
+
+@layer alawein-overlay {
+  [data-overlay="s2"] {
+    /* ── Inherit S1 ──────────────────────────────────────────────── */
+    --aw-color-accent:        var(--aw-ninja-blood);
+    --aw-color-accent-hover:  var(--aw-ninja-ember);
+    --aw-clip-theme:          var(--aw-clip-cut-tr-md);
+    --aw-transition-fast:     var(--aw-duration-fast) var(--aw-ease-ninja);
+    --aw-transition-normal:   var(--aw-duration-normal) var(--aw-ease-ninja);
+
+    /* ── Shadows: Ninja System ───────────────────────────────────── */
+    --aw-shadow-theme:        var(--aw-shadow-ninja-md);
+    --aw-shadow-theme-lg:     var(--aw-shadow-ninja-lg);
+
+    /* ── Texture: Weave Overlay ──────────────────────────────────── */
+    --aw-texture-theme:       var(--aw-texture-weave);
+    --aw-texture-theme-opacity: var(--aw-texture-opacity-subtle);
+
+    /* ── Evidence: Muted Markers ──────────────────────────────────── */
+    --aw-evidence-color:      var(--aw-ninja-smoke);
+    --aw-evidence-font:       var(--aw-font-mono);
+    --aw-evidence-size:       var(--aw-text-xs);
+  }
+}

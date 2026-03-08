@@ -1,0 +1,30 @@
+/* aw-devkit | Component Master Index
+ * Import this single file to get all component styles.
+ *
+ * Usage:
+ *   <link rel="stylesheet" href="components/index.css">
+ */
+
+/* ── Primitives ──────────────────────────────────────────────────── */
+@import './primitives/button.css';
+@import './primitives/input.css';
+@import './primitives/badge.css';
+@import './primitives/tag.css';
+@import './primitives/divider.css';
+
+/* ── Composite ───────────────────────────────────────────────────── */
+@import './composite/card.css';
+@import './composite/nav.css';
+@import './composite/modal.css';
+@import './composite/toast.css';
+@import './composite/tabs.css';
+
+/* ── Data ────────────────────────────────────────────────────────── */
+@import './data/table.css';
+@import './data/stats-panel.css';
+@import './data/terminal.css';
+
+/* ── Layout ──────────────────────────────────────────────────────── */
+@import './layout/grid.css';
+@import './layout/hero.css';
+@import './layout/footer.css';

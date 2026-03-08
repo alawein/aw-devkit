@@ -1,0 +1,56 @@
+/* aw-devkit | Base Spacing Tokens
+ * 4px base unit. Space scale from 1 (4px) to 24 (96px).
+ * Grid tokens for 12-column layouts.
+ */
+
+@layer alawein-base {
+  :root {
+    /* ── Base Unit ───────────────────────────────────────────────── */
+    --aw-space-unit: 4px;
+
+    /* ── Space Scale ─────────────────────────────────────────────── */
+    --aw-space-0:   0;
+    --aw-space-px:  1px;
+    --aw-space-0-5: 2px;
+    --aw-space-1:   4px;
+    --aw-space-1-5: 6px;
+    --aw-space-2:   8px;
+    --aw-space-3:   12px;
+    --aw-space-4:   16px;
+    --aw-space-5:   20px;
+    --aw-space-6:   24px;
+    --aw-space-7:   28px;
+    --aw-space-8:   32px;
+    --aw-space-10:  40px;
+    --aw-space-12:  48px;
+    --aw-space-14:  56px;
+    --aw-space-16:  64px;
+    --aw-space-18:  72px;
+    --aw-space-20:  80px;
+    --aw-space-24:  96px;
+
+    /* ── Grid Tokens ─────────────────────────────────────────────── */
+    --aw-grid-columns:     12;
+    --aw-grid-gutter:      var(--aw-space-4);
+    --aw-grid-margin:      var(--aw-space-4);
+    --aw-grid-max-width:   1200px;
+
+    /* ── Responsive Grid Margins ─────────────────────────────────── */
+    --aw-grid-margin-sm:   var(--aw-space-4);    /* 375px+ */
+    --aw-grid-margin-md:   var(--aw-space-6);    /* 768px+ */
+    --aw-grid-margin-lg:   var(--aw-space-8);    /* 1200px+ */
+
+    /* ── Component Spacing ───────────────────────────────────────── */
+    --aw-padding-xs:    var(--aw-space-1);
+    --aw-padding-sm:    var(--aw-space-2);
+    --aw-padding-md:    var(--aw-space-4);
+    --aw-padding-lg:    var(--aw-space-6);
+    --aw-padding-xl:    var(--aw-space-8);
+
+    --aw-gap-xs:        var(--aw-space-1);
+    --aw-gap-sm:        var(--aw-space-2);
+    --aw-gap-md:        var(--aw-space-4);
+    --aw-gap-lg:        var(--aw-space-6);
+    --aw-gap-xl:        var(--aw-space-8);
+  }
+}

@@ -1,0 +1,45 @@
+/* aw-devkit | Badge Component */
+
+@layer alawein-components {
+  .aw-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--aw-space-0-5) var(--aw-space-2);
+    font-family: var(--aw-font-mono);
+    font-size: var(--aw-text-xs);
+    font-weight: var(--aw-weight-bold);
+    letter-spacing: var(--aw-tracking-wide);
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--aw-color-text);
+    background: var(--aw-color-bg-surface);
+    border: var(--aw-border-thin) solid var(--aw-color-border);
+    clip-path: var(--aw-clip-cut-tr-sm);
+  }
+
+  .aw-badge--success {
+    color: var(--aw-color-success);
+    border-color: var(--aw-color-success);
+  }
+
+  .aw-badge--warning {
+    color: var(--aw-color-warning);
+    border-color: var(--aw-color-warning);
+  }
+
+  .aw-badge--error {
+    color: var(--aw-color-error);
+    border-color: var(--aw-color-error);
+  }
+
+  .aw-badge--info {
+    color: var(--aw-color-info);
+    border-color: var(--aw-color-info);
+  }
+
+  .aw-badge--accent {
+    color: var(--aw-ninja-ghost);
+    background: var(--aw-color-accent);
+    border-color: var(--aw-color-accent);
+  }
+}

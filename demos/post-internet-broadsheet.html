@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="broadsheet" data-overlay="s0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aw-devkit — Post-Internet Broadsheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../tokens/index.css">
+  <link rel="stylesheet" href="../components/index.css">
+</head>
+<body style="margin:0; background:var(--aw-color-bg); color:var(--aw-color-text); font-family:var(--aw-font-body); line-height:var(--aw-leading-body);">
+
+  <!-- Nav -->
+  <nav class="aw-nav">
+    <a href="#" class="aw-nav__brand">Alawein Dispatch</a>
+    <ul class="aw-nav__links">
+      <li><a href="#" class="aw-nav__link aw-nav__link--active">Briefing</a></li>
+      <li><a href="#" class="aw-nav__link">Operations</a></li>
+      <li><a href="#" class="aw-nav__link">Archive</a></li>
+    </ul>
+    <span class="aw-nav__evidence">v0.1.0</span>
+  </nav>
+
+  <!-- Controls -->
+  <div class="aw-grid" style="padding-top:var(--aw-space-4); padding-bottom:var(--aw-space-4);">
+    <div class="aw-col-6 aw-col-md-3">
+      <label class="aw-label" for="theme-select">Theme</label>
+      <select class="aw-select" id="theme-select">
+        <option value="broadsheet" selected>Post-Internet Broadsheet</option>
+        <option value="vhs">VHS Pulp Future</option>
+        <option value="industrial">Industrial Neon</option>
+        <option value="arcade">Arcade Concrete</option>
+      </select>
+    </div>
+    <div class="aw-col-6 aw-col-md-3">
+      <label class="aw-label" for="overlay-range">Ninja Overlay: <span id="overlay-value">S0</span></label>
+      <input type="range" id="overlay-range" min="0" max="4" value="0" class="aw-input" style="padding:var(--aw-space-1);">
+    </div>
+  </div>
+
+  <hr class="aw-divider--editorial">
+
+  <!-- Hero -->
+  <section class="aw-hero">
+    <div class="aw-hero__content">
+      <h1 class="aw-hero__title">Field Manual<br>Edition 001</h1>
+      <p class="aw-hero__subtitle">Operational briefing for the Alawein design system. Every token documented. Every pattern field-tested. Deploy with confidence.</p>
+      <div class="aw-hero__actions">
+        <button class="aw-btn aw-btn--primary">Access Briefing</button>
+        <button class="aw-btn">View Archive</button>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider">
+
+  <!-- Cards -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Token Architecture</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>120+ CSS custom properties organized in four cascade layers. Base tokens establish immutable identity. Theme tokens override semantics. Overlay tokens assert ninja presence.</p>
+          <span class="aw-badge aw-badge--info">CSS</span>
+          <span class="aw-badge">Tokens</span>
+        </div>
+        <div class="aw-card__footer">REF-001 // 2026.03.07</div>
+      </article>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Component Library</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>Primitives, composites, data displays, and layouts. Every component consumes tokens through the style contract. No border-radius. Clip-path geometry defines every edge.</p>
+          <span class="aw-badge aw-badge--success">Stable</span>
+          <span class="aw-badge">16 Components</span>
+        </div>
+        <div class="aw-card__footer">REF-002 // 2026.03.07</div>
+      </article>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Ninja Overlay</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>Persistent identity layer at four intensity levels. S1 whispers. S4 dominates. The overlay composites with any theme, asserting Alawein presence without destroying context.</p>
+          <span class="aw-badge aw-badge--warning">Experimental</span>
+          <span class="aw-badge">S1–S4</span>
+        </div>
+        <div class="aw-card__footer">REF-003 // 2026.03.07</div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="aw-divider--thick">
+
+  <!-- Stats -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">System Status</h2>
+    </div>
+    <div class="aw-col-12">
+      <div class="aw-stats">
+        <div class="aw-stat">
+          <div class="aw-stat__label">Tokens</div>
+          <div class="aw-stat__value">120+</div>
+          <div class="aw-stat__delta aw-stat__delta--up">Active</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Components</div>
+          <div class="aw-stat__value">16</div>
+          <div class="aw-stat__delta aw-stat__delta--up">Stable</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Themes</div>
+          <div class="aw-stat__value">4</div>
+          <div class="aw-stat__delta">Deployed</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">JS Size</div>
+          <div class="aw-stat__value">&lt;5KB</div>
+          <div class="aw-stat__delta aw-stat__delta--up">Budget Met</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider">
+
+  <!-- Form -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-6">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Contact Operations</h2>
+      <div style="display:flex; flex-direction:column; gap:var(--aw-space-3);">
+        <div>
+          <label class="aw-label" for="name-input">Operative Name</label>
+          <input class="aw-input" id="name-input" type="text" placeholder="Enter your callsign">
+        </div>
+        <div>
+          <label class="aw-label" for="msg-input">Message</label>
+          <textarea class="aw-input" id="msg-input" rows="3" placeholder="Briefing content..."></textarea>
+        </div>
+        <div style="display:flex; gap:var(--aw-space-3);">
+          <label class="aw-checkbox"><input type="checkbox" checked> Encrypt transmission</label>
+          <label class="aw-checkbox"><input type="checkbox"> Priority flag</label>
+        </div>
+        <div>
+          <button class="aw-btn aw-btn--primary">Transmit</button>
+          <button class="aw-btn aw-btn--ghost">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="aw-col-12 aw-col-md-6">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Tags</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:var(--aw-space-2);">
+        <span class="aw-tag">CSS Tokens</span>
+        <span class="aw-tag">Vanilla JS</span>
+        <span class="aw-tag">No Build Step</span>
+        <span class="aw-tag">Zero Dependencies</span>
+        <span class="aw-tag aw-tag--removable">Clip-Path <button class="aw-tag__remove">&times;</button></span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider">
+
+  <!-- Terminal -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-8">
+      <div class="aw-terminal">
+        <div class="aw-terminal__header">
+          <span class="aw-terminal__dot aw-terminal__dot--red"></span>
+          <span class="aw-terminal__dot aw-terminal__dot--yellow"></span>
+          <span class="aw-terminal__dot aw-terminal__dot--green"></span>
+          aw-devkit — terminal
+        </div>
+        <div class="aw-terminal__body"><span class="aw-terminal__prompt">$ </span>import { setTheme } from './tools/theme-engine.js'
+<span class="aw-terminal__prompt">$ </span>setTheme('broadsheet')
+<span class="aw-terminal__output">true</span>
+<span class="aw-terminal__comment">// Theme applied: Post-Internet Broadsheet</span>
+<span class="aw-terminal__prompt">$ </span>document.documentElement.dataset.overlay = 's2'
+<span class="aw-terminal__comment">// Ninja overlay at 50% — shadows + weave active</span></div>
+      </div>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <div class="aw-table-wrap">
+        <table class="aw-table aw-table--striped aw-table--compact">
+          <thead>
+            <tr><th>Token</th><th>Value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="aw-table__mono">--aw-ninja-void</td><td class="aw-table__mono">#0d0d0d</td></tr>
+            <tr><td class="aw-table__mono">--aw-ninja-blood</td><td class="aw-table__mono">#8b0000</td></tr>
+            <tr><td class="aw-table__mono">--aw-ninja-ghost</td><td class="aw-table__mono">#f5f1eb</td></tr>
+            <tr><td class="aw-table__mono">--aw-ninja-moonlight</td><td class="aw-table__mono">#c0c5ce</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="aw-footer">
+    <div class="aw-footer__inner">
+      <div class="aw-footer__evidence">
+        <span class="aw-footer__mark">ISS-001</span>
+        <span class="aw-footer__mark">2026.03.07</span>
+        <span class="aw-footer__mark">v0.1.0</span>
+      </div>
+      <ul class="aw-footer__links">
+        <li><a href="#" class="aw-footer__link">Tokens</a></li>
+        <li><a href="#" class="aw-footer__link">Components</a></li>
+        <li><a href="#" class="aw-footer__link">Docs</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Theme/Overlay Control Script -->
+  <script type="module">
+    import { setTheme, setOverlay } from '../tools/theme-engine.js';
+
+    document.getElementById('theme-select').addEventListener('change', (e) => {
+      setTheme(e.target.value);
+    });
+
+    const overlayRange = document.getElementById('overlay-range');
+    const overlayValue = document.getElementById('overlay-value');
+    overlayRange.addEventListener('input', (e) => {
+      const level = `s${e.target.value}`;
+      setOverlay(level);
+      overlayValue.textContent = level.toUpperCase();
+    });
+  </script>
+</body>
+</html>

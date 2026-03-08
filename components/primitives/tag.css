@@ -1,0 +1,47 @@
+/* aw-devkit | Tag Component */
+
+@layer alawein-components {
+  .aw-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--aw-space-1);
+    padding: var(--aw-space-1) var(--aw-space-3);
+    font-family: var(--aw-font-mono);
+    font-size: var(--aw-text-xs);
+    font-weight: var(--aw-weight-medium);
+    letter-spacing: var(--aw-tracking-wide);
+    text-transform: uppercase;
+    color: var(--aw-color-text);
+    background: var(--aw-color-bg-surface);
+    border: var(--aw-border-thin) solid var(--aw-color-border);
+    clip-path: var(--aw-clip-cut-dual-sm);
+    transition: all var(--aw-transition-fast);
+  }
+
+  .aw-tag:hover {
+    border-color: var(--aw-color-border-strong);
+  }
+
+  .aw-tag--removable {
+    padding-right: var(--aw-space-1);
+  }
+
+  .aw-tag__remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--aw-color-text-muted);
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+  .aw-tag__remove:hover {
+    color: var(--aw-color-error);
+  }
+}

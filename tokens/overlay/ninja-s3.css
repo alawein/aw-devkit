@@ -1,0 +1,36 @@
+/* aw-devkit | Ninja Overlay S3 — 80% Identity
+ * Heavy: geometry dominates, dual-cut clip-paths, strong shadows, dense weave.
+ * The theme is still visible but ninja identity shapes every surface.
+ */
+
+@layer alawein-overlay {
+  [data-overlay="s3"] {
+    /* ── Inherit S1+S2 ───────────────────────────────────────────── */
+    --aw-color-accent:        var(--aw-ninja-blood);
+    --aw-color-accent-hover:  var(--aw-ninja-ember);
+    --aw-transition-fast:     var(--aw-duration-fast) var(--aw-ease-ninja);
+    --aw-transition-normal:   var(--aw-duration-normal) var(--aw-ease-ninja);
+
+    /* ── Geometry Dominates ──────────────────────────────────────── */
+    --aw-clip-theme:          var(--aw-clip-cut-dual-lg);
+
+    /* ── Strong Shadows ──────────────────────────────────────────── */
+    --aw-shadow-theme:        var(--aw-shadow-ninja-lg);
+    --aw-shadow-theme-lg:     var(--aw-shadow-ninja-xl);
+
+    /* ── Dense Texture ───────────────────────────────────────────── */
+    --aw-texture-theme:       var(--aw-texture-weave);
+    --aw-texture-theme-opacity: var(--aw-texture-opacity-normal);
+
+    /* ── Evidence: Visible ───────────────────────────────────────── */
+    --aw-evidence-color:      var(--aw-ninja-moonlight);
+    --aw-evidence-font:       var(--aw-font-mono);
+    --aw-evidence-size:       var(--aw-text-xs);
+
+    /* ── Border Override ─────────────────────────────────────────── */
+    --aw-color-border-strong: var(--aw-ninja-blood);
+
+    /* ── Surface Tinting ─────────────────────────────────────────── */
+    --aw-color-bg-surface:    var(--aw-ninja-smoke);
+  }
+}

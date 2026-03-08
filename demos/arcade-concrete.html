@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="arcade" data-overlay="s0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aw-devkit — Arcade Concrete</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../tokens/index.css">
+  <link rel="stylesheet" href="../components/index.css">
+</head>
+<body style="margin:0; background:var(--aw-color-bg); color:var(--aw-color-text); font-family:var(--aw-font-body); line-height:var(--aw-leading-body);">
+
+  <!-- Nav -->
+  <nav class="aw-nav">
+    <a href="#" class="aw-nav__brand">AW >> Arcade</a>
+    <ul class="aw-nav__links">
+      <li><a href="#" class="aw-nav__link aw-nav__link--active">Play</a></li>
+      <li><a href="#" class="aw-nav__link">High Scores</a></li>
+      <li><a href="#" class="aw-nav__link">Credits</a></li>
+    </ul>
+    <span class="aw-nav__evidence">COIN 01</span>
+  </nav>
+
+  <!-- Controls -->
+  <div class="aw-grid" style="padding-top:var(--aw-space-4); padding-bottom:var(--aw-space-4);">
+    <div class="aw-col-6 aw-col-md-3">
+      <label class="aw-label" for="theme-select">Theme</label>
+      <select class="aw-select" id="theme-select">
+        <option value="broadsheet">Post-Internet Broadsheet</option>
+        <option value="vhs">VHS Pulp Future</option>
+        <option value="industrial">Industrial Neon</option>
+        <option value="arcade" selected>Arcade Concrete</option>
+      </select>
+    </div>
+    <div class="aw-col-6 aw-col-md-3">
+      <label class="aw-label" for="overlay-range">Ninja Overlay: <span id="overlay-value">S0</span></label>
+      <input type="range" id="overlay-range" min="0" max="4" value="0" class="aw-input" style="padding:var(--aw-space-1);">
+    </div>
+  </div>
+
+  <hr class="aw-divider--thick">
+
+  <!-- Hero -->
+  <section class="aw-hero">
+    <div class="aw-hero__content">
+      <h1 class="aw-hero__title">Insert Coin<br>To Continue</h1>
+      <p class="aw-hero__subtitle">8-bit precision meets brutalist concrete. Every pixel deliberate. Every shadow stepped. No anti-aliasing. No compromise. Press start.</p>
+      <div class="aw-hero__actions">
+        <button class="aw-btn aw-btn--primary">Start Game</button>
+        <button class="aw-btn">Options</button>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider--thick">
+
+  <!-- Cards -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Player 1 Ready</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>Pixel borders at 8px. Stepped shadows creating depth without anti-aliasing. Dithered textures for surface detail. Limited palette enforced — every color earns its place on screen.</p>
+          <span class="aw-badge aw-badge--info">P1</span>
+          <span class="aw-badge">8px Grid</span>
+        </div>
+        <div class="aw-card__footer">LVL-01 // SCORE: 0000</div>
+      </article>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Power-Ups</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>Token system loaded with 120+ properties. Each token is a power-up — equip the right combination for your level. Clip-path geometry replaces rounded corners. Sharp edges only.</p>
+          <span class="aw-badge aw-badge--success">Active</span>
+          <span class="aw-badge">120+ Items</span>
+        </div>
+        <div class="aw-card__footer">LVL-02 // SCORE: 1500</div>
+      </article>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Boss Battle</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>The Ninja Overlay is the final boss. At S4, identity takes full control — void palette, shuriken geometry, maximum shadow depth. Every surface bears the mark. Can your theme survive?</p>
+          <span class="aw-badge aw-badge--error">Boss</span>
+          <span class="aw-badge aw-badge--warning">S4</span>
+        </div>
+        <div class="aw-card__footer">LVL-99 // SCORE: ????</div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="aw-divider--thick">
+
+  <!-- Stats -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Score Board</h2>
+    </div>
+    <div class="aw-col-12">
+      <div class="aw-stats">
+        <div class="aw-stat">
+          <div class="aw-stat__label">High Score</div>
+          <div class="aw-stat__value">9999</div>
+          <div class="aw-stat__delta aw-stat__delta--up">New Record</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Lives</div>
+          <div class="aw-stat__value">3</div>
+          <div class="aw-stat__delta">Remaining</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Level</div>
+          <div class="aw-stat__value">42</div>
+          <div class="aw-stat__delta aw-stat__delta--up">+7</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Coins</div>
+          <div class="aw-stat__value">256</div>
+          <div class="aw-stat__delta aw-stat__delta--up">+32</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider">
+
+  <!-- Form -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-6">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Enter Name</h2>
+      <div style="display:flex; flex-direction:column; gap:var(--aw-space-3);">
+        <div>
+          <label class="aw-label" for="player-input">Player Tag</label>
+          <input class="aw-input" id="player-input" type="text" placeholder="AAA" maxlength="3">
+        </div>
+        <div>
+          <label class="aw-label" for="message-input">Victory Message</label>
+          <textarea class="aw-input" id="message-input" rows="3" placeholder="GG..."></textarea>
+        </div>
+        <div style="display:flex; gap:var(--aw-space-3);">
+          <label class="aw-checkbox"><input type="checkbox" checked> Save to leaderboard</label>
+          <label class="aw-checkbox"><input type="checkbox"> Share replay</label>
+        </div>
+        <div>
+          <button class="aw-btn aw-btn--primary">Submit Score</button>
+          <button class="aw-btn aw-btn--ghost">Continue</button>
+        </div>
+      </div>
+    </div>
+    <div class="aw-col-12 aw-col-md-6">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Achievements</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:var(--aw-space-2);">
+        <span class="aw-tag">Pixel Perfect</span>
+        <span class="aw-tag">No Radius</span>
+        <span class="aw-tag">Zero Deps</span>
+        <span class="aw-tag">Stepped Shadow</span>
+        <span class="aw-tag aw-tag--removable">Dithered <button class="aw-tag__remove">&times;</button></span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider">
+
+  <!-- Terminal -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-8">
+      <div class="aw-terminal">
+        <div class="aw-terminal__header">
+          <span class="aw-terminal__dot aw-terminal__dot--red"></span>
+          <span class="aw-terminal__dot aw-terminal__dot--yellow"></span>
+          <span class="aw-terminal__dot aw-terminal__dot--green"></span>
+          aw-devkit — game console
+        </div>
+        <div class="aw-terminal__body"><span class="aw-terminal__prompt">&gt; </span>LOAD "ARCADE-CONCRETE",8,1
+<span class="aw-terminal__output">SEARCHING FOR ARCADE-CONCRETE</span>
+<span class="aw-terminal__output">LOADING...</span>
+<span class="aw-terminal__output">READY.</span>
+<span class="aw-terminal__prompt">&gt; </span>RUN
+<span class="aw-terminal__comment">// Pixel grid: 8px. Shadows: stepped. Dither: active.</span></div>
+      </div>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <div class="aw-table-wrap">
+        <table class="aw-table aw-table--striped aw-table--compact">
+          <thead>
+            <tr><th>Player</th><th>Score</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="aw-table__mono">AW1</td><td class="aw-table__mono">9999</td></tr>
+            <tr><td class="aw-table__mono">NJA</td><td class="aw-table__mono">8500</td></tr>
+            <tr><td class="aw-table__mono">CSS</td><td class="aw-table__mono">7200</td></tr>
+            <tr><td class="aw-table__mono">PIX</td><td class="aw-table__mono">6100</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="aw-footer">
+    <div class="aw-footer__inner">
+      <div class="aw-footer__evidence">
+        <span class="aw-footer__mark">CABINET-01</span>
+        <span class="aw-footer__mark">2026.03.07</span>
+        <span class="aw-footer__mark">ROM-v0.1</span>
+      </div>
+      <ul class="aw-footer__links">
+        <li><a href="#" class="aw-footer__link">Tokens</a></li>
+        <li><a href="#" class="aw-footer__link">Components</a></li>
+        <li><a href="#" class="aw-footer__link">Insert Coin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { setTheme, setOverlay } from '../tools/theme-engine.js';
+
+    document.getElementById('theme-select').addEventListener('change', (e) => {
+      setTheme(e.target.value);
+    });
+
+    const overlayRange = document.getElementById('overlay-range');
+    const overlayValue = document.getElementById('overlay-value');
+    overlayRange.addEventListener('input', (e) => {
+      const level = `s${e.target.value}`;
+      setOverlay(level);
+      overlayValue.textContent = level.toUpperCase();
+    });
+  </script>
+</body>
+</html>

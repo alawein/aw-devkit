@@ -1,0 +1,69 @@
+/* aw-devkit | Base Typography Tokens
+ * Font families, major-third type scale (1.250), and semantic role assignments.
+ * All sizes use rem for accessibility; line-heights are unitless.
+ */
+
+@layer alawein-base {
+  :root {
+    /* ── Font Families ───────────────────────────────────────────── */
+    --aw-font-serif:    'Playfair Display', Georgia, 'Times New Roman', serif;
+    --aw-font-mono:     'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+    --aw-font-sans:     'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --aw-font-display:  'Bebas Neue', 'Impact', 'Arial Black', sans-serif;
+
+    /* ── Major-Third Scale (1.250) ───────────────────────────────── */
+    /* base = 1rem (16px)                                            */
+    --aw-text-xs:    0.64rem;    /* 10.24px */
+    --aw-text-sm:    0.8rem;     /* 12.8px  */
+    --aw-text-base:  1rem;       /* 16px    */
+    --aw-text-md:    1.25rem;    /* 20px    */
+    --aw-text-lg:    1.563rem;   /* 25px    */
+    --aw-text-xl:    1.953rem;   /* 31.25px */
+    --aw-text-2xl:   2.441rem;   /* 39.06px */
+    --aw-text-3xl:   3.052rem;   /* 48.83px */
+    --aw-text-4xl:   3.815rem;   /* 61.04px */
+    --aw-text-5xl:   4.768rem;   /* 76.29px */
+
+    /* ── Line Heights ────────────────────────────────────────────── */
+    --aw-leading-tight:   1.1;
+    --aw-leading-snug:    1.25;
+    --aw-leading-normal:  1.5;
+    --aw-leading-relaxed: 1.65;
+    --aw-leading-loose:   1.8;
+
+    /* ── Letter Spacing ──────────────────────────────────────────── */
+    --aw-tracking-tight:    -0.02em;
+    --aw-tracking-normal:   0;
+    --aw-tracking-wide:     0.05em;
+    --aw-tracking-wider:    0.1em;
+    --aw-tracking-widest:   0.2em;
+    --aw-tracking-display:  0.15em;   /* for Bebas Neue display type */
+
+    /* ── Font Weights ────────────────────────────────────────────── */
+    --aw-weight-light:    300;
+    --aw-weight-regular:  400;
+    --aw-weight-medium:   500;
+    --aw-weight-semibold: 600;
+    --aw-weight-bold:     700;
+    --aw-weight-black:    900;
+
+    /* ── Semantic Role Assignments ────────────────────────────────── */
+    --aw-font-body:      var(--aw-font-sans);
+    --aw-font-heading:   var(--aw-font-display);
+    --aw-font-code:      var(--aw-font-mono);
+    --aw-font-editorial: var(--aw-font-serif);
+
+    --aw-size-body:      var(--aw-text-base);
+    --aw-size-caption:   var(--aw-text-sm);
+    --aw-size-label:     var(--aw-text-sm);
+    --aw-size-h1:        var(--aw-text-4xl);
+    --aw-size-h2:        var(--aw-text-3xl);
+    --aw-size-h3:        var(--aw-text-2xl);
+    --aw-size-h4:        var(--aw-text-xl);
+    --aw-size-h5:        var(--aw-text-lg);
+    --aw-size-h6:        var(--aw-text-md);
+
+    --aw-leading-body:   var(--aw-leading-normal);
+    --aw-leading-heading: var(--aw-leading-tight);
+  }
+}

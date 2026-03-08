@@ -1,0 +1,77 @@
+/* aw-devkit | Grid Layout Component
+ * 12-column responsive grid system.
+ */
+
+@layer alawein-components {
+  .aw-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--aw-grid-columns, 12), 1fr);
+    gap: var(--aw-grid-gutter, var(--aw-space-4));
+    max-width: var(--aw-grid-max-width, 1200px);
+    margin-inline: auto;
+    padding-inline: var(--aw-grid-margin, var(--aw-space-4));
+  }
+
+  /* ── Column Spans ──────────────────────────────────────────────── */
+  .aw-col-1  { grid-column: span 1; }
+  .aw-col-2  { grid-column: span 2; }
+  .aw-col-3  { grid-column: span 3; }
+  .aw-col-4  { grid-column: span 4; }
+  .aw-col-5  { grid-column: span 5; }
+  .aw-col-6  { grid-column: span 6; }
+  .aw-col-7  { grid-column: span 7; }
+  .aw-col-8  { grid-column: span 8; }
+  .aw-col-9  { grid-column: span 9; }
+  .aw-col-10 { grid-column: span 10; }
+  .aw-col-11 { grid-column: span 11; }
+  .aw-col-12 { grid-column: span 12; }
+
+  /* ── Responsive: Tablet (768px+) ───────────────────────────────── */
+  @media (min-width: 768px) {
+    .aw-grid {
+      padding-inline: var(--aw-grid-margin-md, var(--aw-space-6));
+    }
+    .aw-col-md-1  { grid-column: span 1; }
+    .aw-col-md-2  { grid-column: span 2; }
+    .aw-col-md-3  { grid-column: span 3; }
+    .aw-col-md-4  { grid-column: span 4; }
+    .aw-col-md-5  { grid-column: span 5; }
+    .aw-col-md-6  { grid-column: span 6; }
+    .aw-col-md-7  { grid-column: span 7; }
+    .aw-col-md-8  { grid-column: span 8; }
+    .aw-col-md-9  { grid-column: span 9; }
+    .aw-col-md-10 { grid-column: span 10; }
+    .aw-col-md-11 { grid-column: span 11; }
+    .aw-col-md-12 { grid-column: span 12; }
+  }
+
+  /* ── Responsive: Desktop (1200px+) ─────────────────────────────── */
+  @media (min-width: 1200px) {
+    .aw-grid {
+      padding-inline: var(--aw-grid-margin-lg, var(--aw-space-8));
+    }
+    .aw-col-lg-1  { grid-column: span 1; }
+    .aw-col-lg-2  { grid-column: span 2; }
+    .aw-col-lg-3  { grid-column: span 3; }
+    .aw-col-lg-4  { grid-column: span 4; }
+    .aw-col-lg-5  { grid-column: span 5; }
+    .aw-col-lg-6  { grid-column: span 6; }
+    .aw-col-lg-7  { grid-column: span 7; }
+    .aw-col-lg-8  { grid-column: span 8; }
+    .aw-col-lg-9  { grid-column: span 9; }
+    .aw-col-lg-10 { grid-column: span 10; }
+    .aw-col-lg-11 { grid-column: span 11; }
+    .aw-col-lg-12 { grid-column: span 12; }
+  }
+
+  /* ── Mobile: Stack All ─────────────────────────────────────────── */
+  @media (max-width: 767px) {
+    .aw-grid {
+      grid-template-columns: 1fr;
+    }
+
+    [class*="aw-col-"] {
+      grid-column: span 1;
+    }
+  }
+}

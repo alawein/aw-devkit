@@ -1,0 +1,81 @@
+/* aw-devkit | Theme: Industrial Neon
+ * OSHA-grade signage, hazard stripes, brutal borders, neon emissions.
+ * Activated via [data-theme="industrial"]
+ */
+
+@layer alawein-theme {
+  [data-theme="industrial"] {
+    /* ── Color Overrides ─────────────────────────────────────────── */
+    --aw-color-bg:            #0a0a0e;    /* factory floor — 18.9:1 with text */
+    --aw-color-bg-elevated:   #14141c;
+    --aw-color-bg-surface:    #1e1e28;
+    --aw-color-text:          #e0e0e8;    /* high-vis white — 14.2:1 on bg */
+    --aw-color-text-muted:    #808090;    /* 5.4:1 on bg */
+    --aw-color-heading:       #ffffff;    /* safety placard */
+    --aw-color-link:          #00f0ff;    /* neon cyan — 10.8:1 on bg */
+    --aw-color-link-hover:    #40f8ff;    /* 12.1:1 on bg */
+    --aw-color-accent:        #ff0055;    /* hazard red — 5.2:1 on bg */
+    --aw-color-accent-hover:  #ff3377;    /* 6.8:1 on bg */
+    --aw-color-border:        #2a2a38;
+    --aw-color-border-strong: #00f0ff;    /* neon border */
+    --aw-color-success:       #00ff88;    /* 11.2:1 on bg */
+    --aw-color-warning:       #ffaa00;    /* 9.8:1 on bg */
+    --aw-color-error:         #ff0055;
+
+    /* ── Industrial-Specific Colors ──────────────────────────────── */
+    --aw-industrial-cyan:     #00f0ff;
+    --aw-industrial-red:      #ff0055;
+    --aw-industrial-yellow:   #ffaa00;
+    --aw-industrial-green:    #00ff88;
+    --aw-industrial-stripe-1: #ffaa00;
+    --aw-industrial-stripe-2: #0a0a0e;
+
+    /* ── Typography ──────────────────────────────────────────────── */
+    --aw-font-body:         var(--aw-font-sans);
+    --aw-font-heading:      var(--aw-font-display);
+    --aw-leading-body:      var(--aw-leading-snug);
+    --aw-tracking-body:     0;
+
+    /* ── Borders: Brutal 6px ─────────────────────────────────────── */
+    --aw-border-theme:      var(--aw-border-brutal) solid var(--aw-industrial-cyan);
+    --aw-border-theme-accent: var(--aw-border-brutal) solid var(--aw-industrial-red);
+
+    /* ── Shadows: Glow + Brutal ──────────────────────────────────── */
+    --aw-shadow-theme:      var(--aw-shadow-brutal-md);
+    --aw-shadow-theme-lg:   var(--aw-shadow-brutal-lg);
+
+    /* ── Textures ────────────────────────────────────────────────── */
+    --aw-texture-theme:     var(--aw-texture-crosshatch);
+    --aw-texture-theme-opacity: var(--aw-texture-opacity-subtle);
+
+    /* ── Clip-Path ───────────────────────────────────────────────── */
+    --aw-clip-theme:        var(--aw-clip-cut-dual-md);
+
+    /* ── Hazard Stripe Pattern ───────────────────────────────────── */
+    --aw-industrial-hazard: repeating-linear-gradient(
+      -45deg,
+      var(--aw-industrial-stripe-1) 0px,
+      var(--aw-industrial-stripe-1) 10px,
+      var(--aw-industrial-stripe-2) 10px,
+      var(--aw-industrial-stripe-2) 20px
+    );
+  }
+
+  /* ── Industrial Light Mode ─────────────────────────────────────── */
+  @media (prefers-color-scheme: light) {
+    [data-theme="industrial"] {
+      --aw-color-bg:            #e8e8ec;    /* concrete slab */
+      --aw-color-bg-elevated:   #f4f4f8;
+      --aw-color-bg-surface:    #d8d8e0;
+      --aw-color-text:          #0a0a0e;    /* 14.5:1 on bg */
+      --aw-color-text-muted:    #4a4a58;    /* 5.8:1 on bg */
+      --aw-color-heading:       #000000;
+      --aw-color-link:          #007088;    /* 5.2:1 on bg */
+      --aw-color-link-hover:    #005068;    /* 7.1:1 on bg */
+      --aw-color-accent:        #cc0044;    /* 5.1:1 on bg */
+      --aw-color-accent-hover:  #aa0033;
+      --aw-color-border:        #c0c0cc;
+      --aw-color-border-strong: #007088;
+    }
+  }
+}

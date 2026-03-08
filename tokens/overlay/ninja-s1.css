@@ -1,0 +1,19 @@
+/* aw-devkit | Ninja Overlay S1 — 20% Identity
+ * Subtle: palette influence + corner cuts + motion timing.
+ * The theme still dominates; ninja presence is a whisper.
+ */
+
+@layer alawein-overlay {
+  [data-overlay="s1"] {
+    /* ── Palette Influence (20%) ──────────────────────────────────── */
+    --aw-color-accent:        var(--aw-ninja-blood);
+    --aw-color-accent-hover:  var(--aw-ninja-ember);
+
+    /* ── Clip-Path: Subtle Cuts ──────────────────────────────────── */
+    --aw-clip-theme:          var(--aw-clip-cut-tr-sm);
+
+    /* ── Motion: Ninja Easing ────────────────────────────────────── */
+    --aw-transition-fast:     var(--aw-duration-fast) var(--aw-ease-ninja);
+    --aw-transition-normal:   var(--aw-duration-normal) var(--aw-ease-ninja);
+  }
+}

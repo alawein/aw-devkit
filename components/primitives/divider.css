@@ -1,0 +1,52 @@
+/* aw-devkit | Divider Component */
+
+@layer alawein-components {
+  .aw-divider {
+    border: none;
+    border-top: var(--aw-border-thin) solid var(--aw-color-border);
+    margin: var(--aw-space-4) 0;
+  }
+
+  .aw-divider--thick {
+    border-top-width: var(--aw-border-thick);
+    border-color: var(--aw-color-border-strong);
+  }
+
+  .aw-divider--hazard {
+    border: none;
+    height: var(--aw-space-2);
+    background: var(--aw-industrial-hazard, repeating-linear-gradient(
+      -45deg,
+      var(--aw-color-warning) 0px,
+      var(--aw-color-warning) 10px,
+      var(--aw-color-bg) 10px,
+      var(--aw-color-bg) 20px
+    ));
+  }
+
+  .aw-divider--editorial {
+    border-top: var(--aw-border-thin) solid var(--aw-color-border-strong);
+    position: relative;
+    margin: var(--aw-space-6) 0;
+  }
+
+  .aw-divider--editorial::after {
+    content: '\25A0';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--aw-color-bg);
+    padding: 0 var(--aw-space-2);
+    color: var(--aw-color-border-strong);
+    font-size: var(--aw-text-xs);
+  }
+
+  .aw-divider--vertical {
+    border-top: none;
+    border-left: var(--aw-border-thin) solid var(--aw-color-border);
+    margin: 0 var(--aw-space-4);
+    height: auto;
+    align-self: stretch;
+  }
+}

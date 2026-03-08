@@ -1,0 +1,11 @@
+/* aw-devkit | Layer Order
+ * Controls CSS cascade priority for the Alawein design system.
+ * Import this file FIRST — before any other aw-devkit stylesheet.
+ *
+ * Cascade (lowest → highest specificity):
+ *   alawein-base      → immutable identity tokens, type scale, spacing
+ *   alawein-theme      → theme-specific overrides (broadsheet, vhs, industrial, arcade)
+ *   alawein-overlay    → Ninja Overlay intensity layers (S1–S4)
+ *   alawein-components → component styles that consume tokens
+ */
+@layer alawein-base, alawein-theme, alawein-overlay, alawein-components;

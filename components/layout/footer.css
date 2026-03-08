@@ -1,0 +1,62 @@
+/* aw-devkit | Footer Layout Component
+ * Evidence marks: issue number, timestamp, version.
+ */
+
+@layer alawein-components {
+  .aw-footer {
+    padding: var(--aw-padding-md);
+    background: var(--aw-color-bg-elevated);
+    border-top: var(--aw-border-thick) solid var(--aw-color-border-strong);
+    font-family: var(--aw-font-mono);
+    font-size: var(--aw-text-xs);
+    color: var(--aw-color-text-muted);
+  }
+
+  .aw-footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--aw-grid-max-width, 1200px);
+    margin-inline: auto;
+    flex-wrap: wrap;
+    gap: var(--aw-space-2);
+  }
+
+  .aw-footer__evidence {
+    display: flex;
+    gap: var(--aw-space-4);
+    letter-spacing: var(--aw-tracking-wide);
+    text-transform: uppercase;
+  }
+
+  .aw-footer__mark {
+    color: var(--aw-evidence-color, var(--aw-color-text-muted));
+    font-family: var(--aw-evidence-font, var(--aw-font-mono));
+    font-size: var(--aw-evidence-size, var(--aw-text-xs));
+  }
+
+  .aw-footer__mark::before {
+    content: '// ';
+    opacity: 0.5;
+  }
+
+  .aw-footer__links {
+    display: flex;
+    gap: var(--aw-space-3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .aw-footer__link {
+    color: var(--aw-color-text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: var(--aw-tracking-wide);
+    transition: color var(--aw-transition-fast);
+  }
+
+  .aw-footer__link:hover {
+    color: var(--aw-color-text);
+  }
+}

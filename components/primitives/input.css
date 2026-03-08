@@ -1,0 +1,111 @@
+/* aw-devkit | Input Component */
+
+@layer alawein-components {
+  .aw-input {
+    display: block;
+    width: 100%;
+    padding: var(--aw-padding-sm) var(--aw-padding-md);
+    font-family: var(--aw-font-body);
+    font-size: var(--aw-text-base);
+    color: var(--aw-color-text);
+    background: var(--aw-color-bg);
+    border: var(--aw-border-thin) solid var(--aw-color-border-strong);
+    clip-path: var(--aw-clip-cut-tr-sm);
+    transition: border-color var(--aw-transition-fast),
+                box-shadow var(--aw-transition-fast);
+  }
+
+  .aw-input:focus {
+    outline: none;
+    border-color: var(--aw-color-focus);
+    box-shadow: var(--aw-shadow-ninja-sm);
+  }
+
+  .aw-input::placeholder {
+    color: var(--aw-color-text-muted);
+  }
+
+  .aw-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .aw-input--error {
+    border-color: var(--aw-color-error);
+  }
+
+  /* ── Select ────────────────────────────────────────────────────── */
+  .aw-select {
+    display: block;
+    width: 100%;
+    padding: var(--aw-padding-sm) var(--aw-padding-md);
+    padding-right: var(--aw-padding-xl);
+    font-family: var(--aw-font-body);
+    font-size: var(--aw-text-base);
+    color: var(--aw-color-text);
+    background: var(--aw-color-bg);
+    border: var(--aw-border-thin) solid var(--aw-color-border-strong);
+    clip-path: var(--aw-clip-cut-tr-sm);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23808090' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--aw-space-3) center;
+    cursor: pointer;
+  }
+
+  .aw-select:focus {
+    outline: none;
+    border-color: var(--aw-color-focus);
+  }
+
+  /* ── Checkbox & Radio ──────────────────────────────────────────── */
+  .aw-checkbox,
+  .aw-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--aw-space-2);
+    cursor: pointer;
+    font-family: var(--aw-font-body);
+    font-size: var(--aw-text-base);
+    color: var(--aw-color-text);
+  }
+
+  .aw-checkbox input,
+  .aw-radio input {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: var(--aw-border-thick) solid var(--aw-color-border-strong);
+    background: var(--aw-color-bg);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .aw-checkbox input {
+    clip-path: var(--aw-clip-cut-tr-sm);
+  }
+
+  .aw-checkbox input:checked,
+  .aw-radio input:checked {
+    background: var(--aw-color-accent);
+    border-color: var(--aw-color-accent);
+  }
+
+  .aw-checkbox input:focus-visible,
+  .aw-radio input:focus-visible {
+    outline: 2px solid var(--aw-color-focus);
+    outline-offset: 2px;
+  }
+
+  /* ── Label ─────────────────────────────────────────────────────── */
+  .aw-label {
+    display: block;
+    font-family: var(--aw-font-body);
+    font-size: var(--aw-size-label);
+    font-weight: var(--aw-weight-semibold);
+    letter-spacing: var(--aw-tracking-wide);
+    text-transform: uppercase;
+    color: var(--aw-color-text-muted);
+    margin-bottom: var(--aw-space-1);
+  }
+}

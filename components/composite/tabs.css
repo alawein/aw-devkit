@@ -1,0 +1,59 @@
+/* aw-devkit | Tabs Component */
+
+@layer alawein-components {
+  .aw-tabs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aw-tabs__list {
+    display: flex;
+    gap: 0;
+    border-bottom: var(--aw-border-thick) solid var(--aw-color-border);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+  }
+
+  .aw-tabs__tab {
+    padding: var(--aw-padding-sm) var(--aw-padding-md);
+    font-family: var(--aw-font-body);
+    font-size: var(--aw-text-sm);
+    font-weight: var(--aw-weight-semibold);
+    letter-spacing: var(--aw-tracking-wide);
+    text-transform: uppercase;
+    color: var(--aw-color-text-muted);
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color var(--aw-transition-fast),
+                border-color var(--aw-transition-fast);
+    margin-bottom: -2px;
+  }
+
+  .aw-tabs__tab:hover {
+    color: var(--aw-color-text);
+  }
+
+  .aw-tabs__tab--active {
+    color: var(--aw-color-heading);
+    border-bottom-color: var(--aw-color-accent);
+  }
+
+  .aw-tabs__tab:focus-visible {
+    outline: 2px solid var(--aw-color-focus);
+    outline-offset: -2px;
+  }
+
+  .aw-tabs__panel {
+    padding: var(--aw-padding-md) 0;
+    display: none;
+  }
+
+  .aw-tabs__panel--active {
+    display: block;
+  }
+}

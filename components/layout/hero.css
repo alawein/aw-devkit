@@ -1,0 +1,76 @@
+/* aw-devkit | Hero Layout Component
+ * Poster-scale display section with texture overlay.
+ */
+
+@layer alawein-components {
+  .aw-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+    padding: var(--aw-space-16) var(--aw-space-8);
+    background: var(--aw-color-bg);
+    overflow: hidden;
+  }
+
+  .aw-hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: var(--aw-grid-max-width, 1200px);
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .aw-hero__title {
+    font-family: var(--aw-font-heading);
+    font-size: var(--aw-text-5xl);
+    font-weight: var(--aw-weight-black);
+    color: var(--aw-color-heading);
+    letter-spacing: var(--aw-tracking-display);
+    text-transform: uppercase;
+    line-height: var(--aw-leading-tight);
+    margin: 0 0 var(--aw-space-4);
+  }
+
+  .aw-hero__subtitle {
+    font-family: var(--aw-font-body);
+    font-size: var(--aw-text-lg);
+    color: var(--aw-color-text);
+    line-height: var(--aw-leading-normal);
+    max-width: 60ch;
+    margin: 0 0 var(--aw-space-6);
+  }
+
+  .aw-hero__actions {
+    display: flex;
+    gap: var(--aw-space-3);
+    flex-wrap: wrap;
+  }
+
+  /* ── Texture Overlay ───────────────────────────────────────────── */
+  .aw-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--aw-texture-theme);
+    opacity: var(--aw-texture-theme-opacity, 0);
+    pointer-events: none;
+  }
+
+  /* ── Responsive ────────────────────────────────────────────────── */
+  @media (max-width: 767px) {
+    .aw-hero {
+      min-height: 40vh;
+      padding: var(--aw-space-8) var(--aw-space-4);
+    }
+
+    .aw-hero__title {
+      font-size: var(--aw-text-3xl);
+    }
+
+    .aw-hero__subtitle {
+      font-size: var(--aw-text-base);
+    }
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="vhs" data-overlay="s0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aw-devkit — VHS Pulp Future</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../tokens/index.css">
+  <link rel="stylesheet" href="../components/index.css">
+</head>
+<body style="margin:0; background:var(--aw-color-bg); color:var(--aw-color-text); font-family:var(--aw-font-body); line-height:var(--aw-leading-body);">
+
+  <!-- Nav -->
+  <nav class="aw-nav">
+    <a href="#" class="aw-nav__brand">AW // Tape Deck</a>
+    <ul class="aw-nav__links">
+      <li><a href="#" class="aw-nav__link aw-nav__link--active">Play</a></li>
+      <li><a href="#" class="aw-nav__link">Rewind</a></li>
+      <li><a href="#" class="aw-nav__link">Eject</a></li>
+    </ul>
+    <span class="aw-nav__evidence">REC ●</span>
+  </nav>
+
+  <!-- Controls -->
+  <div class="aw-grid" style="padding-top:var(--aw-space-4); padding-bottom:var(--aw-space-4);">
+    <div class="aw-col-6 aw-col-md-3">
+      <label class="aw-label" for="theme-select">Theme</label>
+      <select class="aw-select" id="theme-select">
+        <option value="broadsheet">Post-Internet Broadsheet</option>
+        <option value="vhs" selected>VHS Pulp Future</option>
+        <option value="industrial">Industrial Neon</option>
+        <option value="arcade">Arcade Concrete</option>
+      </select>
+    </div>
+    <div class="aw-col-6 aw-col-md-3">
+      <label class="aw-label" for="overlay-range">Ninja Overlay: <span id="overlay-value">S0</span></label>
+      <input type="range" id="overlay-range" min="0" max="4" value="0" class="aw-input" style="padding:var(--aw-space-1);">
+    </div>
+  </div>
+
+  <hr class="aw-divider--thick">
+
+  <!-- Hero -->
+  <section class="aw-hero">
+    <div class="aw-hero__content">
+      <h1 class="aw-hero__title">Tracking<br>Adjusted</h1>
+      <p class="aw-hero__subtitle">Analog signal acquired. Chroma noise within tolerance. Warm amber pulses through phosphor decay. The future was always on tape — you just had to rewind far enough.</p>
+      <div class="aw-hero__actions">
+        <button class="aw-btn aw-btn--primary">Play Tape</button>
+        <button class="aw-btn">Adjust Tracking</button>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider--thick">
+
+  <!-- Cards -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Signal Source</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>Warm amber on CRT black. Every color bleeds at the edges like a fourth-generation dub. Scanlines render across every surface. The palette remembers a future that never arrived.</p>
+          <span class="aw-badge aw-badge--warning">Amber</span>
+          <span class="aw-badge">Scanlines</span>
+        </div>
+        <div class="aw-card__footer">TAPE-001 // 1987.XX.XX</div>
+      </article>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Chroma Shift</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>Color channels separate under stress. Cyan ghosts trail behind every element. Magenta bleeds into the margins. This is not a bug — it is the aesthetic of signal decay.</p>
+          <span class="aw-badge aw-badge--info">Cyan</span>
+          <span class="aw-badge aw-badge--accent">Misregistered</span>
+        </div>
+        <div class="aw-card__footer">TAPE-002 // 1987.XX.XX</div>
+      </article>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Tape Head</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>The tracking distortion pattern runs vertically across the viewport. Horizontal noise bands appear at unpredictable intervals. Glow shadows emanate from every interactive element.</p>
+          <span class="aw-badge aw-badge--error">Distorted</span>
+          <span class="aw-badge">Glow</span>
+        </div>
+        <div class="aw-card__footer">TAPE-003 // 1987.XX.XX</div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="aw-divider--thick">
+
+  <!-- Stats -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Signal Diagnostics</h2>
+    </div>
+    <div class="aw-col-12">
+      <div class="aw-stats">
+        <div class="aw-stat">
+          <div class="aw-stat__label">Signal</div>
+          <div class="aw-stat__value">87%</div>
+          <div class="aw-stat__delta aw-stat__delta--up">Stable</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Tracking</div>
+          <div class="aw-stat__value">OK</div>
+          <div class="aw-stat__delta">Adjusted</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Chroma</div>
+          <div class="aw-stat__value">2px</div>
+          <div class="aw-stat__delta aw-stat__delta--down">Offset</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Generation</div>
+          <div class="aw-stat__value">4th</div>
+          <div class="aw-stat__delta">Dubbed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider">
+
+  <!-- Form -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-6">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Label This Tape</h2>
+      <div style="display:flex; flex-direction:column; gap:var(--aw-space-3);">
+        <div>
+          <label class="aw-label" for="tape-input">Tape Title</label>
+          <input class="aw-input" id="tape-input" type="text" placeholder="UNTITLED_DUB_04">
+        </div>
+        <div>
+          <label class="aw-label" for="notes-input">Liner Notes</label>
+          <textarea class="aw-input" id="notes-input" rows="3" placeholder="Recording conditions..."></textarea>
+        </div>
+        <div style="display:flex; gap:var(--aw-space-3);">
+          <label class="aw-checkbox"><input type="checkbox" checked> Write-protect tab</label>
+          <label class="aw-checkbox"><input type="checkbox"> Dolby NR</label>
+        </div>
+        <div>
+          <button class="aw-btn aw-btn--primary">Record</button>
+          <button class="aw-btn aw-btn--ghost">Eject</button>
+        </div>
+      </div>
+    </div>
+    <div class="aw-col-12 aw-col-md-6">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Format Tags</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:var(--aw-space-2);">
+        <span class="aw-tag">VHS-C</span>
+        <span class="aw-tag">NTSC</span>
+        <span class="aw-tag">SP Mode</span>
+        <span class="aw-tag">Mono Audio</span>
+        <span class="aw-tag aw-tag--removable">HiFi <button class="aw-tag__remove">&times;</button></span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider">
+
+  <!-- Terminal -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-8">
+      <div class="aw-terminal">
+        <div class="aw-terminal__header">
+          <span class="aw-terminal__dot aw-terminal__dot--red"></span>
+          <span class="aw-terminal__dot aw-terminal__dot--yellow"></span>
+          <span class="aw-terminal__dot aw-terminal__dot--green"></span>
+          aw-devkit — tape monitor
+        </div>
+        <div class="aw-terminal__body"><span class="aw-terminal__prompt">[VCR] </span>LOADING TAPE...
+<span class="aw-terminal__output">[OK]  Signal lock: ACQUIRED</span>
+<span class="aw-terminal__output">[OK]  Tracking: ADJUSTED</span>
+<span class="aw-terminal__output">[OK]  Color system: NTSC</span>
+<span class="aw-terminal__output">[!!]  Chroma offset: 2px (within tolerance)</span>
+<span class="aw-terminal__comment">// Playback in progress. Do not adjust your set.</span></div>
+      </div>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <div class="aw-table-wrap">
+        <table class="aw-table aw-table--striped aw-table--compact">
+          <thead>
+            <tr><th>Channel</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Luma (Y)</td><td><span class="aw-badge aw-badge--success">Clean</span></td></tr>
+            <tr><td>Chroma (C)</td><td><span class="aw-badge aw-badge--warning">Offset</span></td></tr>
+            <tr><td>Audio L</td><td><span class="aw-badge aw-badge--success">Clean</span></td></tr>
+            <tr><td>Audio R</td><td><span class="aw-badge aw-badge--error">Noise</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="aw-footer">
+    <div class="aw-footer__inner">
+      <div class="aw-footer__evidence">
+        <span class="aw-footer__mark">TAPE-DECK-01</span>
+        <span class="aw-footer__mark">1987.XX.XX</span>
+        <span class="aw-footer__mark">GEN-4</span>
+      </div>
+      <ul class="aw-footer__links">
+        <li><a href="#" class="aw-footer__link">Rewind</a></li>
+        <li><a href="#" class="aw-footer__link">Components</a></li>
+        <li><a href="#" class="aw-footer__link">Eject</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { setTheme, setOverlay } from '../tools/theme-engine.js';
+
+    document.getElementById('theme-select').addEventListener('change', (e) => {
+      setTheme(e.target.value);
+    });
+
+    const overlayRange = document.getElementById('overlay-range');
+    const overlayValue = document.getElementById('overlay-value');
+    overlayRange.addEventListener('input', (e) => {
+      const level = `s${e.target.value}`;
+      setOverlay(level);
+      overlayValue.textContent = level.toUpperCase();
+    });
+  </script>
+</body>
+</html>

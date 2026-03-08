@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="industrial" data-overlay="s0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aw-devkit — Industrial Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../tokens/index.css">
+  <link rel="stylesheet" href="../components/index.css">
+</head>
+<body style="margin:0; background:var(--aw-color-bg); color:var(--aw-color-text); font-family:var(--aw-font-body); line-height:var(--aw-leading-body);">
+
+  <!-- Nav -->
+  <nav class="aw-nav">
+    <a href="#" class="aw-nav__brand">AW // Control Panel</a>
+    <ul class="aw-nav__links">
+      <li><a href="#" class="aw-nav__link aw-nav__link--active">Dashboard</a></li>
+      <li><a href="#" class="aw-nav__link">Diagnostics</a></li>
+      <li><a href="#" class="aw-nav__link">Logs</a></li>
+    </ul>
+    <span class="aw-nav__evidence">SYS-ONLINE</span>
+  </nav>
+
+  <!-- Controls -->
+  <div class="aw-grid" style="padding-top:var(--aw-space-4); padding-bottom:var(--aw-space-4);">
+    <div class="aw-col-6 aw-col-md-3">
+      <label class="aw-label" for="theme-select">Theme</label>
+      <select class="aw-select" id="theme-select">
+        <option value="broadsheet">Post-Internet Broadsheet</option>
+        <option value="vhs">VHS Pulp Future</option>
+        <option value="industrial" selected>Industrial Neon</option>
+        <option value="arcade">Arcade Concrete</option>
+      </select>
+    </div>
+    <div class="aw-col-6 aw-col-md-3">
+      <label class="aw-label" for="overlay-range">Ninja Overlay: <span id="overlay-value">S0</span></label>
+      <input type="range" id="overlay-range" min="0" max="4" value="0" class="aw-input" style="padding:var(--aw-space-1);">
+    </div>
+  </div>
+
+  <hr class="aw-divider--hazard">
+
+  <!-- Hero -->
+  <section class="aw-hero">
+    <div class="aw-hero__content">
+      <h1 class="aw-hero__title">System<br>Operational</h1>
+      <p class="aw-hero__subtitle">All subsystems nominal. Design tokens deployed across 4 cascade layers. Component integrity verified. Awaiting further instructions.</p>
+      <div class="aw-hero__actions">
+        <button class="aw-btn aw-btn--primary">Initialize</button>
+        <button class="aw-btn">Run Diagnostics</button>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider--hazard">
+
+  <!-- Cards -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Power Grid</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>Primary power distribution stable. Neon cyan emissions within tolerance. All signage circuits operating at rated capacity. No faults detected in hazard stripe rendering pipeline.</p>
+          <span class="aw-badge aw-badge--success">Online</span>
+          <span class="aw-badge">6px Borders</span>
+        </div>
+        <div class="aw-card__footer">GRID-001 // 2026.03.07</div>
+      </article>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Warning Systems</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>OSHA-compliant signage protocols active. Hazard stripes rendering at correct -45deg angle. Color contrast ratios exceed AA minimum on all warning surfaces. Brutal shadow depth nominal.</p>
+          <span class="aw-badge aw-badge--warning">Caution</span>
+          <span class="aw-badge">WCAG AA</span>
+        </div>
+        <div class="aw-card__footer">WARN-002 // 2026.03.07</div>
+      </article>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <article class="aw-card">
+        <div class="aw-card__header">
+          <h3 class="aw-card__title">Containment</h3>
+        </div>
+        <div class="aw-card__body">
+          <p>Identity containment layer holding. Ninja overlay at standby. Ready to escalate from S0 to S4 on command. Clip-path geometry generators calibrated. No unauthorized border-radius detected.</p>
+          <span class="aw-badge aw-badge--error">Standby</span>
+          <span class="aw-badge">S0-S4</span>
+        </div>
+        <div class="aw-card__footer">CONT-003 // 2026.03.07</div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="aw-divider--thick">
+
+  <!-- Stats -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">System Readout</h2>
+    </div>
+    <div class="aw-col-12">
+      <div class="aw-stats">
+        <div class="aw-stat">
+          <div class="aw-stat__label">Uptime</div>
+          <div class="aw-stat__value">99.9%</div>
+          <div class="aw-stat__delta aw-stat__delta--up">+0.2%</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Contrast</div>
+          <div class="aw-stat__value">AA+</div>
+          <div class="aw-stat__delta aw-stat__delta--up">Passing</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Layers</div>
+          <div class="aw-stat__value">4</div>
+          <div class="aw-stat__delta">Cascaded</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat__label">Payload</div>
+          <div class="aw-stat__value">0 dep</div>
+          <div class="aw-stat__delta aw-stat__delta--up">Clean</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider">
+
+  <!-- Form -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-6">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Submit Report</h2>
+      <div style="display:flex; flex-direction:column; gap:var(--aw-space-3);">
+        <div>
+          <label class="aw-label" for="operator-input">Operator ID</label>
+          <input class="aw-input" id="operator-input" type="text" placeholder="Enter operator designation">
+        </div>
+        <div>
+          <label class="aw-label" for="report-input">Incident Report</label>
+          <textarea class="aw-input" id="report-input" rows="3" placeholder="Describe the incident..."></textarea>
+        </div>
+        <div style="display:flex; gap:var(--aw-space-3);">
+          <label class="aw-checkbox"><input type="checkbox" checked> Critical priority</label>
+          <label class="aw-checkbox"><input type="checkbox"> Requires escalation</label>
+        </div>
+        <div>
+          <button class="aw-btn aw-btn--primary">Submit</button>
+          <button class="aw-btn aw-btn--danger">Emergency Stop</button>
+        </div>
+      </div>
+    </div>
+    <div class="aw-col-12 aw-col-md-6">
+      <h2 style="font-family:var(--aw-font-heading); font-size:var(--aw-size-h3); color:var(--aw-color-heading); letter-spacing:var(--aw-tracking-display); text-transform:uppercase; margin:0 0 var(--aw-space-4);">Classification</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:var(--aw-space-2);">
+        <span class="aw-tag">Hazard Level A</span>
+        <span class="aw-tag">Neon Emission</span>
+        <span class="aw-tag">Brutal Border</span>
+        <span class="aw-tag">OSHA Compliant</span>
+        <span class="aw-tag aw-tag--removable">Crosshatch <button class="aw-tag__remove">&times;</button></span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="aw-divider">
+
+  <!-- Terminal -->
+  <section class="aw-grid" style="padding-block:var(--aw-space-6);">
+    <div class="aw-col-12 aw-col-md-8">
+      <div class="aw-terminal">
+        <div class="aw-terminal__header">
+          <span class="aw-terminal__dot aw-terminal__dot--red"></span>
+          <span class="aw-terminal__dot aw-terminal__dot--yellow"></span>
+          <span class="aw-terminal__dot aw-terminal__dot--green"></span>
+          aw-devkit — system log
+        </div>
+        <div class="aw-terminal__body"><span class="aw-terminal__prompt">[SYS] </span>Initializing Industrial Neon theme...
+<span class="aw-terminal__output">[OK]  Hazard stripes: ACTIVE</span>
+<span class="aw-terminal__output">[OK]  Border width: 6px BRUTAL</span>
+<span class="aw-terminal__output">[OK]  Neon cyan: #00f0ff</span>
+<span class="aw-terminal__output">[OK]  Hazard red: #ff0055</span>
+<span class="aw-terminal__comment">// All systems nominal. Awaiting commands.</span></div>
+      </div>
+    </div>
+    <div class="aw-col-12 aw-col-md-4">
+      <div class="aw-table-wrap">
+        <table class="aw-table aw-table--striped aw-table--compact">
+          <thead>
+            <tr><th>System</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tokens</td><td><span class="aw-badge aw-badge--success">Active</span></td></tr>
+            <tr><td>Components</td><td><span class="aw-badge aw-badge--success">Active</span></td></tr>
+            <tr><td>Overlay</td><td><span class="aw-badge aw-badge--warning">Standby</span></td></tr>
+            <tr><td>Audit</td><td><span class="aw-badge aw-badge--info">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="aw-footer">
+    <div class="aw-footer__inner">
+      <div class="aw-footer__evidence">
+        <span class="aw-footer__mark">FACILITY-07</span>
+        <span class="aw-footer__mark">2026.03.07</span>
+        <span class="aw-footer__mark">BUILD-001</span>
+      </div>
+      <ul class="aw-footer__links">
+        <li><a href="#" class="aw-footer__link">Schematics</a></li>
+        <li><a href="#" class="aw-footer__link">Components</a></li>
+        <li><a href="#" class="aw-footer__link">Safety</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { setTheme, setOverlay } from '../tools/theme-engine.js';
+
+    document.getElementById('theme-select').addEventListener('change', (e) => {
+      setTheme(e.target.value);
+    });
+
+    const overlayRange = document.getElementById('overlay-range');
+    const overlayValue = document.getElementById('overlay-value');
+    overlayRange.addEventListener('input', (e) => {
+      const level = `s${e.target.value}`;
+      setOverlay(level);
+      overlayValue.textContent = level.toUpperCase();
+    });
+  </script>
+</body>
+</html>

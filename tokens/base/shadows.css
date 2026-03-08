@@ -1,0 +1,66 @@
+/* aw-devkit | Base Shadow Tokens
+ * 6 named shadow systems — no generic box-shadow allowed in components.
+ * Systems: brutal, ninja, pixel, glow, ink, glass.
+ */
+
+@layer alawein-base {
+  :root {
+    /* ── Brutal Shadows (hard offset, no blur) ───────────────────── */
+    --aw-shadow-brutal-sm:   4px 4px 0 var(--aw-ninja-void);
+    --aw-shadow-brutal-md:   6px 6px 0 var(--aw-ninja-void);
+    --aw-shadow-brutal-lg:   8px 8px 0 var(--aw-ninja-void);
+    --aw-shadow-brutal-xl:   12px 12px 0 var(--aw-ninja-void);
+
+    /* ── Ninja Shadows (multi-layer with blood accent) ───────────── */
+    --aw-shadow-ninja-sm:    2px 2px 0 var(--aw-ninja-blood),
+                             4px 4px 0 var(--aw-ninja-void);
+    --aw-shadow-ninja-md:    3px 3px 0 var(--aw-ninja-blood),
+                             6px 6px 0 var(--aw-ninja-void);
+    --aw-shadow-ninja-lg:    4px 4px 0 var(--aw-ninja-blood),
+                             8px 8px 0 var(--aw-ninja-void),
+                             12px 12px 0 rgba(139,0,0,0.3);
+    --aw-shadow-ninja-xl:    5px 5px 0 var(--aw-ninja-blood),
+                             10px 10px 0 var(--aw-ninja-void),
+                             15px 15px 0 rgba(139,0,0,0.3),
+                             20px 20px 0 rgba(13,13,13,0.2);
+
+    /* ── Pixel Shadows (stepped, retro) ──────────────────────────── */
+    --aw-shadow-pixel-sm:    2px 2px 0 var(--aw-ninja-void),
+                             4px 4px 0 var(--aw-ninja-void);
+    --aw-shadow-pixel-md:    2px 2px 0 var(--aw-ninja-void),
+                             4px 4px 0 var(--aw-ninja-void),
+                             6px 6px 0 var(--aw-ninja-void);
+    --aw-shadow-pixel-lg:    2px 2px 0 var(--aw-ninja-void),
+                             4px 4px 0 var(--aw-ninja-void),
+                             6px 6px 0 var(--aw-ninja-void),
+                             8px 8px 0 var(--aw-ninja-void);
+
+    /* ── Glow Shadows (emission, neon) ───────────────────────────── */
+    --aw-shadow-glow-sm:     0 0 4px currentColor,
+                             0 0 8px currentColor;
+    --aw-shadow-glow-md:     0 0 8px currentColor,
+                             0 0 16px currentColor,
+                             0 0 24px currentColor;
+    --aw-shadow-glow-lg:     0 0 12px currentColor,
+                             0 0 24px currentColor,
+                             0 0 48px currentColor,
+                             0 0 72px currentColor;
+
+    /* ── Ink Shadows (editorial, subtle depth) ───────────────────── */
+    --aw-shadow-ink-sm:      0 1px 2px rgba(13,13,13,0.15);
+    --aw-shadow-ink-md:      0 2px 4px rgba(13,13,13,0.12),
+                             0 4px 8px rgba(13,13,13,0.08);
+    --aw-shadow-ink-lg:      0 4px 8px rgba(13,13,13,0.1),
+                             0 8px 16px rgba(13,13,13,0.08),
+                             0 16px 32px rgba(13,13,13,0.06);
+
+    /* ── Glass Shadows (translucent, frosted) ────────────────────── */
+    --aw-shadow-glass-sm:    0 2px 8px rgba(13,13,13,0.4),
+                             inset 0 1px 0 rgba(255,255,255,0.05);
+    --aw-shadow-glass-md:    0 4px 16px rgba(13,13,13,0.5),
+                             inset 0 1px 0 rgba(255,255,255,0.08);
+    --aw-shadow-glass-lg:    0 8px 32px rgba(13,13,13,0.6),
+                             inset 0 1px 0 rgba(255,255,255,0.1),
+                             inset 0 -1px 0 rgba(0,0,0,0.2);
+  }
+}

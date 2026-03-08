@@ -1,0 +1,57 @@
+/* aw-devkit | Base Color Tokens
+ * Identity palette is immutable — themes must not override --aw-ninja-* tokens.
+ * Semantic slots (--aw-color-*) are designed to be overridden by theme layers.
+ */
+
+@layer alawein-base {
+  :root {
+    /* ── Identity Palette (immutable) ────────────────────────────── */
+    --aw-ninja-void:      #0d0d0d;  /* deepest black — base background */
+    --aw-ninja-charcoal:  #1a1a2e;  /* primary dark surface */
+    --aw-ninja-smoke:     #2d2d44;  /* elevated dark surface */
+    --aw-ninja-moonlight: #c0c5ce;  /* primary text on dark — 9.5:1 on void */
+    --aw-ninja-ghost:     #f5f1eb;  /* inverse text / light surface — 14.8:1 on void */
+    --aw-ninja-blood:     #8b0000;  /* primary accent, danger — 4.9:1 on ghost */
+    --aw-ninja-ember:     #a31515;  /* blood hover state — 4.5:1 on ghost */
+    --aw-ninja-veil:      rgba(13,13,13,0.85); /* overlay scrim */
+
+    /* ── Semantic Color Slots (theme-overridable) ────────────────── */
+    --aw-color-bg:            var(--aw-ninja-void);
+    --aw-color-bg-elevated:   var(--aw-ninja-charcoal);
+    --aw-color-bg-surface:    var(--aw-ninja-smoke);
+    --aw-color-text:          var(--aw-ninja-moonlight);
+    --aw-color-text-muted:    #8a8fa8;   /* 5.2:1 on void */
+    --aw-color-text-inverse:  var(--aw-ninja-void);
+    --aw-color-heading:       var(--aw-ninja-ghost);
+    --aw-color-link:          #5b8dde;   /* 5.1:1 on void */
+    --aw-color-link-hover:    #7aa3e8;   /* 6.8:1 on void */
+    --aw-color-accent:        var(--aw-ninja-blood);
+    --aw-color-accent-hover:  var(--aw-ninja-ember);
+    --aw-color-border:        #3a3a54;   /* 2.1:1 on charcoal — decorative only */
+    --aw-color-border-strong: #5a5a74;   /* 3.2:1 on charcoal */
+    --aw-color-focus:         #5b8dde;   /* matches link — 5.1:1 on void */
+    --aw-color-success:       #2d8a4e;   /* 4.6:1 on ghost */
+    --aw-color-warning:       #b8860b;   /* 4.5:1 on void */
+    --aw-color-error:         var(--aw-ninja-blood);
+    --aw-color-info:          #2874a6;   /* 4.7:1 on ghost */
+    --aw-color-overlay:       var(--aw-ninja-veil);
+  }
+
+  /* ── Light Mode Defaults ───────────────────────────────────────── */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --aw-color-bg:            var(--aw-ninja-ghost);
+      --aw-color-bg-elevated:   #ffffff;
+      --aw-color-bg-surface:    #e8e4de;       /* 1.3:1 on ghost — subtle */
+      --aw-color-text:          #2c2c3a;       /* 11.2:1 on ghost */
+      --aw-color-text-muted:    #5a5a6e;       /* 5.3:1 on ghost */
+      --aw-color-text-inverse:  var(--aw-ninja-ghost);
+      --aw-color-heading:       var(--aw-ninja-void);
+      --aw-color-link:          #1a5fb4;       /* 6.2:1 on ghost */
+      --aw-color-link-hover:    #0d3f82;       /* 9.1:1 on ghost */
+      --aw-color-border:        #c0bdb6;       /* decorative */
+      --aw-color-border-strong: #8a877f;       /* 3.0:1 on ghost */
+      --aw-color-focus:         #1a5fb4;       /* 6.2:1 on ghost */
+    }
+  }
+}

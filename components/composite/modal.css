@@ -1,0 +1,88 @@
+/* aw-devkit | Modal Component */
+
+@layer alawein-components {
+  .aw-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--aw-color-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--aw-transition-normal),
+                visibility var(--aw-transition-normal);
+  }
+
+  .aw-modal-overlay--open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .aw-modal {
+    position: relative;
+    width: min(90vw, 560px);
+    max-height: 85vh;
+    overflow-y: auto;
+    background: var(--aw-color-bg-elevated);
+    border: var(--aw-border-thick) solid var(--aw-color-border-strong);
+    clip-path: var(--aw-clip-theme, var(--aw-clip-cut-tr-lg));
+    box-shadow: var(--aw-shadow-ninja-lg);
+    transform: translateY(16px);
+    transition: transform var(--aw-transition-normal);
+  }
+
+  .aw-modal-overlay--open .aw-modal {
+    transform: translateY(0);
+  }
+
+  .aw-modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--aw-padding-md);
+    border-bottom: var(--aw-border-thin) solid var(--aw-color-border);
+  }
+
+  .aw-modal__title {
+    font-family: var(--aw-font-heading);
+    font-size: var(--aw-size-h4);
+    font-weight: var(--aw-weight-bold);
+    color: var(--aw-color-heading);
+    letter-spacing: var(--aw-tracking-wide);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .aw-modal__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: var(--aw-border-thin) solid var(--aw-color-border);
+    color: var(--aw-color-text-muted);
+    cursor: pointer;
+    clip-path: var(--aw-clip-cut-tr-sm);
+    transition: all var(--aw-transition-fast);
+  }
+
+  .aw-modal__close:hover {
+    color: var(--aw-color-error);
+    border-color: var(--aw-color-error);
+  }
+
+  .aw-modal__body {
+    padding: var(--aw-padding-md);
+  }
+
+  .aw-modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--aw-space-2);
+    padding: var(--aw-padding-sm) var(--aw-padding-md);
+    border-top: var(--aw-border-thin) solid var(--aw-color-border);
+  }
+}

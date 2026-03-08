@@ -1,0 +1,41 @@
+/* aw-devkit | Base Texture Tokens
+ * Inline SVG data URI textures for overlays and backgrounds.
+ * Systems: scanlines, halftone, noise, grain, VHS tracking, ninja weave.
+ */
+
+@layer alawein-base {
+  :root {
+    /* ── Scanlines ───────────────────────────────────────────────── */
+    --aw-texture-scanlines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='2' fill='rgba(0,0,0,0.08)'/%3E%3C/svg%3E");
+
+    --aw-texture-scanlines-heavy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='2' fill='rgba(0,0,0,0.18)'/%3E%3C/svg%3E");
+
+    /* ── Halftone Dots ───────────────────────────────────────────── */
+    --aw-texture-halftone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Ccircle cx='4' cy='4' r='1.5' fill='rgba(0,0,0,0.1)'/%3E%3C/svg%3E");
+
+    --aw-texture-halftone-dense: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Ccircle cx='3' cy='3' r='1.5' fill='rgba(0,0,0,0.15)'/%3E%3C/svg%3E");
+
+    /* ── Noise (feTurbulence) ─────────────────────────────────────── */
+    --aw-texture-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+
+    /* ── Film Grain ──────────────────────────────────────────────── */
+    --aw-texture-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='0.06'/%3E%3C/svg%3E");
+
+    /* ── VHS Tracking Distortion ──────────────────────────────────── */
+    --aw-texture-vhs-tracking: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='400'%3E%3Cfilter id='v'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.4' numOctaves='2' seed='2'/%3E%3CfeDisplacementMap in='SourceGraphic' scale='6'/%3E%3C/filter%3E%3Crect width='100' height='2' y='120' fill='rgba(255,255,255,0.06)' filter='url(%23v)'/%3E%3Crect width='100' height='1' y='280' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E");
+
+    /* ── Ninja Fabric Weave ───────────────────────────────────────── */
+    --aw-texture-weave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M0 0h4v4H0zM4 4h4v4H4z' fill='rgba(0,0,0,0.04)'/%3E%3Cpath d='M4 0h4v4H4zM0 4h4v4H0z' fill='rgba(255,255,255,0.02)'/%3E%3C/svg%3E");
+
+    /* ── Crosshatch ───────────────────────────────────────────────── */
+    --aw-texture-crosshatch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpath d='M0 0l10 10M10 0l-10 10' stroke='rgba(0,0,0,0.06)' stroke-width='0.5'/%3E%3C/svg%3E");
+
+    /* ── Dither (pixel pattern) ───────────────────────────────────── */
+    --aw-texture-dither: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect x='0' y='0' width='2' height='2' fill='rgba(0,0,0,0.08)'/%3E%3Crect x='2' y='2' width='2' height='2' fill='rgba(0,0,0,0.08)'/%3E%3C/svg%3E");
+
+    /* ── Texture Opacity Multipliers ──────────────────────────────── */
+    --aw-texture-opacity-subtle:  0.3;
+    --aw-texture-opacity-normal:  0.6;
+    --aw-texture-opacity-heavy:   1;
+  }
+}

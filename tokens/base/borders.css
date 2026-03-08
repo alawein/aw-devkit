@@ -1,0 +1,65 @@
+/* aw-devkit | Base Border & Clip-Path Tokens
+ * No border-radius in this system — use clip-path for shaped edges.
+ * Border widths: thin (1px), thick (2px), brutal (6px), pixel (8px).
+ * Complete polygon() values for all clip-path variants.
+ */
+
+@layer alawein-base {
+  :root {
+    /* ── Border Widths ───────────────────────────────────────────── */
+    --aw-border-thin:    1px;
+    --aw-border-thick:   2px;
+    --aw-border-brutal:  6px;
+    --aw-border-pixel:   8px;
+
+    /* ── Border Styles ───────────────────────────────────────────── */
+    --aw-border-solid:   solid;
+    --aw-border-dashed:  dashed;
+
+    /* ── Clip-Path: Cut Top-Right ────────────────────────────────── */
+    --aw-clip-cut-tr-sm:  polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+    --aw-clip-cut-tr-md:  polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    --aw-clip-cut-tr-lg:  polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
+    --aw-clip-cut-tr-xl:  polygon(0 0, calc(100% - 32px) 0, 100% 32px, 100% 100%, 0 100%);
+
+    /* ── Clip-Path: Dual Cut (TL + BR) ───────────────────────────── */
+    --aw-clip-cut-dual-sm:  polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+    --aw-clip-cut-dual-md:  polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+    --aw-clip-cut-dual-lg:  polygon(24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px);
+    --aw-clip-cut-dual-xl:  polygon(32px 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%, 0 32px);
+
+    /* ── Clip-Path: Shuriken (4-point star cut) ──────────────────── */
+    --aw-clip-shuriken-sm:  polygon(
+      4px 0, 50% 4px, calc(100% - 4px) 0,
+      100% 4px, calc(100% - 4px) 50%, 100% calc(100% - 4px),
+      calc(100% - 4px) 100%, 50% calc(100% - 4px), 4px 100%,
+      0 calc(100% - 4px), 4px 50%, 0 4px
+    );
+    --aw-clip-shuriken-md:  polygon(
+      8px 0, 50% 8px, calc(100% - 8px) 0,
+      100% 8px, calc(100% - 8px) 50%, 100% calc(100% - 8px),
+      calc(100% - 8px) 100%, 50% calc(100% - 8px), 8px 100%,
+      0 calc(100% - 8px), 8px 50%, 0 8px
+    );
+    --aw-clip-shuriken-lg:  polygon(
+      12px 0, 50% 12px, calc(100% - 12px) 0,
+      100% 12px, calc(100% - 12px) 50%, 100% calc(100% - 12px),
+      calc(100% - 12px) 100%, 50% calc(100% - 12px), 12px 100%,
+      0 calc(100% - 12px), 12px 50%, 0 12px
+    );
+    --aw-clip-shuriken-xl:  polygon(
+      16px 0, 50% 16px, calc(100% - 16px) 0,
+      100% 16px, calc(100% - 16px) 50%, 100% calc(100% - 16px),
+      calc(100% - 16px) 100%, 50% calc(100% - 16px), 16px 100%,
+      0 calc(100% - 16px), 16px 50%, 0 16px
+    );
+
+    /* ── Clip-Path: Notch (bottom-right step) ────────────────────── */
+    --aw-clip-notch-sm:   polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+    --aw-clip-notch-md:   polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+
+    /* ── Clip-Path: Angled (full diagonal slice) ─────────────────── */
+    --aw-clip-angle-left:  polygon(8px 0, 100% 0, 100% 100%, 0 100%, 0 8px);
+    --aw-clip-angle-right: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  }
+}

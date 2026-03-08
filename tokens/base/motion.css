@@ -1,0 +1,55 @@
+/* aw-devkit | Base Motion Tokens
+ * Duration, easing, and animation primitives.
+ * ALL motion collapses to instant under prefers-reduced-motion.
+ */
+
+@layer alawein-base {
+  :root {
+    /* ── Durations ───────────────────────────────────────────────── */
+    --aw-duration-instant:  0ms;
+    --aw-duration-fast:     120ms;
+    --aw-duration-normal:   200ms;
+    --aw-duration-slow:     500ms;
+    --aw-duration-glacial:  1000ms;
+
+    /* ── Easings ─────────────────────────────────────────────────── */
+    --aw-ease-default:  cubic-bezier(0.4, 0, 0.2, 1);    /* material standard */
+    --aw-ease-ninja:    cubic-bezier(0.33, 0, 0.2, 1);    /* sharp entry, smooth exit */
+    --aw-ease-snap:     cubic-bezier(0.68, -0.55, 0.265, 1.55); /* overshoot snap */
+    --aw-ease-in:       cubic-bezier(0.4, 0, 1, 1);
+    --aw-ease-out:      cubic-bezier(0, 0, 0.2, 1);
+    --aw-ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+    --aw-ease-linear:   linear;
+
+    /* ── Transition Shorthands ───────────────────────────────────── */
+    --aw-transition-fast:    var(--aw-duration-fast) var(--aw-ease-ninja);
+    --aw-transition-normal:  var(--aw-duration-normal) var(--aw-ease-ninja);
+    --aw-transition-slow:    var(--aw-duration-slow) var(--aw-ease-ninja);
+  }
+
+  /* ── Reduced Motion: Collapse All ──────────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --aw-duration-instant:  0ms;
+      --aw-duration-fast:     0ms;
+      --aw-duration-normal:   0ms;
+      --aw-duration-slow:     0ms;
+      --aw-duration-glacial:  0ms;
+
+      --aw-ease-default:  linear;
+      --aw-ease-ninja:    linear;
+      --aw-ease-snap:     linear;
+      --aw-ease-in:       linear;
+      --aw-ease-out:      linear;
+      --aw-ease-in-out:   linear;
+    }
+
+    /* Kill all animations and transitions globally */
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

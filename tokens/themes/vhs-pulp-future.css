@@ -1,0 +1,71 @@
+/* aw-devkit | Theme: VHS Pulp Future
+ * Analog video decay, chroma aberration, warm amber + cool cyan.
+ * Activated via [data-theme="vhs"]
+ */
+
+@layer alawein-theme {
+  [data-theme="vhs"] {
+    /* ── Color Overrides ─────────────────────────────────────────── */
+    --aw-color-bg:            #0a0a12;    /* CRT off-black */
+    --aw-color-bg-elevated:   #12121e;    /* tube warm-up */
+    --aw-color-bg-surface:    #1a1a2a;    /* scan field */
+    --aw-color-text:          #d4a574;    /* warm amber — 7.8:1 on bg */
+    --aw-color-text-muted:    #8a7560;    /* 4.5:1 on bg */
+    --aw-color-heading:       #e8c89a;    /* hot amber — 10.2:1 on bg */
+    --aw-color-link:          #40c4c4;    /* chroma cyan — 6.1:1 on bg */
+    --aw-color-link-hover:    #60e0e0;    /* hot cyan — 8.3:1 on bg */
+    --aw-color-accent:        #d4a574;
+    --aw-color-accent-hover:  #e8c89a;
+    --aw-color-border:        #2a2a3e;    /* phosphor edge */
+    --aw-color-border-strong: #4a4a6e;    /* 2.8:1 on bg */
+    --aw-color-success:       #40c470;    /* 5.2:1 on bg */
+    --aw-color-warning:       #d4a530;    /* 6.5:1 on bg */
+    --aw-color-error:         #c44040;    /* 4.8:1 on bg */
+
+    /* ── VHS-Specific Colors ─────────────────────────────────────── */
+    --aw-vhs-amber:         #d4a574;
+    --aw-vhs-cyan:          #40c4c4;
+    --aw-vhs-magenta:       #c040a0;
+    --aw-vhs-phosphor:      #30ff60;
+    --aw-vhs-static:        #808090;
+
+    /* ── Typography ──────────────────────────────────────────────── */
+    --aw-font-body:         var(--aw-font-mono);
+    --aw-font-heading:      var(--aw-font-display);
+    --aw-leading-body:      var(--aw-leading-normal);
+    --aw-tracking-body:     0.02em;
+
+    /* ── Shadows: Glow System ────────────────────────────────────── */
+    --aw-shadow-theme:      var(--aw-shadow-glow-sm);
+    --aw-shadow-theme-lg:   var(--aw-shadow-glow-md);
+
+    /* ── Textures ────────────────────────────────────────────────── */
+    --aw-texture-theme:         var(--aw-texture-scanlines);
+    --aw-texture-theme-overlay: var(--aw-texture-vhs-tracking);
+    --aw-texture-theme-opacity: var(--aw-texture-opacity-normal);
+
+    /* ── Clip-Path ───────────────────────────────────────────────── */
+    --aw-clip-theme:        var(--aw-clip-cut-tr-md);
+
+    /* ── Chroma Misregistration (CSS offset for pseudo-elements) ── */
+    --aw-vhs-chroma-offset: 2px;
+    --aw-vhs-chroma-color-r: rgba(255,60,60,0.3);
+    --aw-vhs-chroma-color-b: rgba(60,60,255,0.3);
+  }
+
+  /* ── VHS Light Mode (washed-out tape) ──────────────────────────── */
+  @media (prefers-color-scheme: light) {
+    [data-theme="vhs"] {
+      --aw-color-bg:            #f0e8d8;    /* sun-bleached tape */
+      --aw-color-bg-elevated:   #f8f0e0;
+      --aw-color-bg-surface:    #e8dcc8;
+      --aw-color-text:          #3a2a1a;    /* 10.8:1 on bg */
+      --aw-color-text-muted:    #6a5a4a;    /* 4.8:1 on bg */
+      --aw-color-heading:       #1a0a00;
+      --aw-color-link:          #1a7a7a;    /* 4.5:1 on bg */
+      --aw-color-link-hover:    #0a5a5a;    /* 6.2:1 on bg */
+      --aw-color-border:        #d0c4b0;
+      --aw-color-border-strong: #8a7e6a;
+    }
+  }
+}
