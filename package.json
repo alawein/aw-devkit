@@ -12,10 +12,12 @@
     "tokens/",
     "components/",
     "tools/",
+    "fonts/fonts.css",
     "bin/"
   ],
   "bin": {
-    "aw-new-theme": "./bin/aw-new-theme.js"
+    "aw-new-theme": "./bin/aw-new-theme.js",
+    "aw-download-fonts": "./bin/aw-download-fonts.js"
   },
   "exports": {
     "./tokens": "./tokens/index.css",

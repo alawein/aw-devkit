@@ -1,0 +1,3 @@
+# Downloaded font files — run `node bin/aw-download-fonts.js` to populate
+*.woff2
+!.gitkeep
