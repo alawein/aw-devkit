@@ -1,6 +1,13 @@
 # aw-devkit
 
-Zero-dependency vanilla CSS+JS design devkit for the Alawein design system.
+Archived zero-dependency vanilla CSS and JS design kit for the Alawein design
+system.
+
+This repo is retained for migration reference. The canonical home for shared
+design tokens, shared components, shared icons, themes, and demo surfaces is
+now [`../devkit/`](../devkit/).
+
+Migration map: [`../devkit/docs/aw-devkit-retirement.md`](../devkit/docs/aw-devkit-retirement.md)
 
 ## Quick Start
 
@@ -18,6 +25,11 @@ Zero-dependency vanilla CSS+JS design devkit for the Alawein design system.
 - Component library with primitives, composites, data, and layout
 - JS tools: theme engine, contrast checker, token exporter
 - No build step, no framework, no dependencies
+
+## Archive Status
+
+- No new shared-resource work should start here
+- Keep this repo only for migration reference and historical design context
 
 ## Themes
 

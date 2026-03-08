@@ -1,6 +1,7 @@
 # Contributing to aw-devkit
 
 Thank you for your interest in contributing!
+This repository is now archival and read-only for normal feature work.
 
 ## Getting Started
 
@@ -9,6 +10,12 @@ Thank you for your interest in contributing!
 3. No build step required — edit CSS/JS directly
 
 ## Development Workflow
+
+Only make changes here when:
+
+- clarifying archival or migration status
+- preserving historical references
+- updating links to the canonical `devkit/` home
 
 ### Branching
 
@@ -35,10 +42,9 @@ docs: update theme activation guide
 
 ## Pull Request Process
 
-1. Verify changes against all 4 themes + overlay combinations
-2. Test `prefers-reduced-motion` fallbacks for any animations
-3. Update `demos/` if adding new components or tokens
-4. Keep PR scope focused — one feature or fix per PR
+1. Verify the change is archival or migration-related
+2. Update links to `../devkit/` when the canonical home changes
+3. Keep PR scope focused — one migration or archival clarification per PR
 
 ## Code Style
 

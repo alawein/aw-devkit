@@ -2,24 +2,26 @@
 type: normative
 authority: canonical
 audience: [ai-agents, contributors]
-last-verified: 2026-03-07
+last-verified:  2026-03-08
 ---
 
 # SSOT — aw-devkit
 
 **Version:** 1.0
 **Last Updated:** 2026-03-07
-**Status:** Active
+**Status:** Archived for migration
 
 ---
 
 ## Purpose
 
-Zero-dependency vanilla CSS+JS design devkit for the Alawein design system. Provides tokens, components, themes, and JS utilities consumed by downstream projects.
+Zero-dependency vanilla CSS+JS design devkit retained for migration reference.
+It no longer serves as the canonical home for shared Alawein design resources.
 
 ## Current State
 
-- Package: `@alawein/aw-devkit`
+- Canonical shared-resource home: `../devkit/`
+- Status: read-only except for migration and archival clarification
 - 4 parent themes: Broadsheet, VHS, Industrial, Arcade
 - Ninja Overlay system: S0–S4
 - ~120 CSS custom properties (`--aw-*` namespace)
@@ -43,8 +45,8 @@ aw-devkit/
 
 ## What's Next
 
-- Consumer integration with devkit Turborepo packages
-- Publish to npm as `@alawein/aw-devkit`
+- Keep migration references aligned with `../devkit/docs/aw-devkit-retirement.md`
+- Retire direct consumer references to this repo as canonical shared-resource paths
 
 ---
 

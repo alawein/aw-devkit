@@ -2,12 +2,13 @@
 type: guide
 authority: canonical
 audience: [ai-agents, contributors]
-last-verified: 2026-03-07
+last-verified:  2026-03-08
 ---
 
 # CLAUDE.md — aw-devkit
 
-Zero-dependency vanilla CSS+JS devkit for the Alawein design system.
+Archived zero-dependency CSS and JS devkit for the Alawein design system.
+Active shared-resource work now belongs in `../devkit/`.
 
 ## Architecture
 
@@ -15,6 +16,13 @@ Zero-dependency vanilla CSS+JS devkit for the Alawein design system.
 - `components/` — `.aw-*` prefixed component styles consuming tokens
 - `tools/` — ES module JS utilities (<5KB total)
 - `demos/` — standalone HTML files using `<link>` imports (no inline styles)
+
+## Archive Status
+
+- This repo is kept for migration reference and historical context.
+- `../devkit/` is the canonical home for shared packages, design tokens, theme
+  assets, and demos.
+- See `../devkit/docs/aw-devkit-retirement.md` for the old-to-new resource map.
 
 ## Layer Order
 
