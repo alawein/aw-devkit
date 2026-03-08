@@ -1,4 +1,11 @@
-# aw-devkit
+﻿---
+type: guide
+authority: canonical
+audience: [ai-agents, contributors]
+last-verified: 2026-03-07
+---
+
+# CLAUDE.md — aw-devkit
 
 Zero-dependency vanilla CSS+JS devkit for the Alawein design system.
 
