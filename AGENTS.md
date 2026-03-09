@@ -1,8 +1,8 @@
-﻿---
+---
 type: normative
 authority: canonical
 audience: [ai-agents, contributors]
-last-verified:  2026-03-08
+last-verified: 2026-03-09
 ---
 
 # AGENTS — aw-devkit

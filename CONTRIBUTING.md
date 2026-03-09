@@ -1,7 +1,6 @@
 # Contributing to aw-devkit
 
-Thank you for your interest in contributing!
-This repository is now archival and read-only for normal feature work.
+Thank you for your interest in contributing. This project follows the [alawein org contributing standards](https://github.com/alawein/alawein/blob/main/CONTRIBUTING.md). This repository is now archival and read-only for normal feature work.
 
 ## Getting Started
 
